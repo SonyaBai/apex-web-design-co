@@ -64,7 +64,7 @@ export default function App() {
         <h2 className="text-4xl font-bold mb-8">Get Started</h2>
 
         <form
-          action="https://formspree.io/f/xrejglrl"
+          action="https://formspree.io/f/xojrvwwb"
           method="POST"
           className="max-w-xl mx-auto space-y-4"
         >
