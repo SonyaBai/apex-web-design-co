@@ -1,23 +1,10 @@
-import {
-  ArrowRight,
-  CheckCircle2,
-  Globe,
-  Search,
-  RefreshCcw,
-  Star,
-  Phone,
-} from "lucide-react";
-
-import portfolioMockup from "../portfolio-mockup.png";
-import elevatedPreview from "../elevated-auto-preview.png";
 import servicesPreview from "../services-preview.png";
 
 export default function App() {
   return (
     <div className="bg-black text-white overflow-hidden">
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center border-b border-white/10 overflow-hidden">
-        {/* VIDEO */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
         <video
           autoPlay
           muted
@@ -28,144 +15,122 @@ export default function App() {
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-purple-950/40" />
 
-        {/* GLOW */}
-        <div className="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-fuchsia-600/20 blur-[180px] rounded-full"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
+          <p className="uppercase tracking-[0.35em] text-fuchsia-300 text-sm mb-6">
+            Premium Websites for Service Businesses
+          </p>
 
-        {/* CONTENT */}
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
-          <div className="max-w-4xl">
-            <p className="uppercase tracking-[0.35em] text-fuchsia-300 text-sm mb-6">
-              Premium Websites for Service Businesses
-            </p>
+          <h1 className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tight mb-8">
+            Websites Built to Grow
+            <span className="block text-fuchsia-300">Your Business</span>
+          </h1>
 
-            <h1 className="text-6xl md:text-8xl font-black leading-[0.95] tracking-tight mb-8">
-              Websites Built to Grow
-              <span className="block text-fuchsia-300">
-                Your Business
-              </span>
-            </h1>
+          <p className="text-xl text-white/75 max-w-2xl leading-relaxed mb-10">
+            High-end websites, local SEO strategy, and modern branding designed
+            to turn traffic into real leads, calls, and revenue.
+          </p>
 
-            <p className="text-xl text-white/70 max-w-2xl leading-relaxed mb-10">
-              High-end websites, local SEO strategy, and modern
-              branding designed to turn traffic into real leads,
-              calls, and revenue.
-            </p>
+          <div className="flex flex-wrap gap-5">
+            <a
+              href="#contact"
+              className="bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all"
+            >
+              Get My Free Quote
+            </a>
 
-            <div className="flex flex-wrap gap-5">
-              <button className="bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all">
-                Get My Free Website Quote
-              </button>
-
-              <button className="border border-white/20 bg-white/10 backdrop-blur-xl px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all">
-                View Work
-              </button>
-            </div>
+            <a
+              href="#services"
+              className="border border-white/20 bg-white/10 backdrop-blur-xl px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all"
+            >
+              View Work
+            </a>
           </div>
         </div>
       </section>
 
-     {/* SERVICES */}
-<section className="relative py-32 px-6 overflow-hidden">
-  {/* BACKGROUND GLOW */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,70,239,0.18),transparent_60%)]"></div>
+      {/* SERVICES - ONE CLEAN IMAGE */}
+      <section id="services" className="relative py-28 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,70,239,0.18),transparent_60%)]" />
 
-  <div className="relative z-10 max-w-7xl mx-auto">
-    {/* HEADER */}
-    <div className="mb-16 text-center">
-      <p className="uppercase tracking-[0.3em] text-fuchsia-300 text-sm mb-4">
-        Services
-      </p>
-
-      <h2 className="text-5xl md:text-6xl font-black tracking-tight">
-        Premium Design.
-        <span className="block text-white/60">
-          Built to Convert.
-        </span>
-      </h2>
-    </div>
-
-    {/* MAIN SHOWCASE */}
-    <div className="group relative rounded-[40px] overflow-hidden border border-fuchsia-500/20 bg-white/[0.03] backdrop-blur-xl shadow-[0_0_120px_rgba(217,70,239,0.10)]">
-      {/* IMAGE */}
-      <div className="relative overflow-hidden">
-        <img
-          src={servicesPreview}
-          alt="Services Preview"
-          className="w-full object-cover brightness-110 group-hover:scale-[1.01] transition-all duration-700"
-        />
-
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
-      </div>
-
-      {/* TEXT */}
-      <div className="absolute bottom-0 left-0 w-full p-8 md:p-14">
-        <div className="w-24 h-1 bg-fuchsia-500 rounded-full mb-6"></div>
-
-        <h3 className="text-4xl md:text-6xl font-black mb-6 max-w-4xl">
-          Strategic Websites Designed
-          to Grow Your Business
-        </h3>
-
-        <p className="text-white/70 text-lg md:text-2xl leading-relaxed max-w-3xl">
-          High-end web design, local SEO, branding,
-          and conversion-focused layouts built for
-          modern service businesses.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-      {/* FAQ */}
-      <section className="px-6 pb-32">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="mb-12">
             <p className="uppercase tracking-[0.3em] text-fuchsia-300 text-sm mb-4">
-              FAQ
+              Services
             </p>
 
-            <h2 className="text-5xl font-black">
-              Common Questions
+            <h2 className="text-5xl md:text-6xl font-black tracking-tight max-w-5xl">
+              Premium Design.
+              <span className="block text-white/60">Built to Convert.</span>
             </h2>
           </div>
 
-          <div className="space-y-6">
-            {[
-              {
-                q: "How long does a website take?",
-                a: "Most projects are completed within 2–4 weeks depending on content, revisions, and scope.",
-              },
-              {
-                q: "Do you build SEO-friendly websites?",
-                a: "Yes. Every website is structured with performance, local SEO, and mobile responsiveness in mind.",
-              },
-              {
-                q: "Can you redesign an existing website?",
-                a: "Absolutely. We modernize outdated websites and improve branding, conversions, and usability.",
-              },
-              {
-                q: "Do you offer hosting and support?",
-                a: "Yes. We can help with hosting, maintenance, updates, and long-term website support.",
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="rounded-3xl border border-white/10 bg-white/[0.03] p-8"
-              >
-                <h3 className="text-2xl font-bold mb-3">
-                  {item.q}
-                </h3>
-
-                <p className="text-white/65 text-lg leading-relaxed">
-                  {item.a}
-                </p>
-              </div>
-            ))}
+          <div className="rounded-[40px] overflow-hidden border border-fuchsia-500/30 shadow-[0_0_120px_rgba(217,70,239,0.18)] bg-black">
+            <img
+              src={servicesPreview}
+              alt="Services preview"
+              className="w-full h-auto block object-cover brightness-110"
+            />
           </div>
         </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="py-28 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]"
+      >
+        <h2 className="text-5xl font-black mb-6">
+          Let’s build your next website
+        </h2>
+
+        <p className="text-white/60 mb-10 text-lg">
+          Tell me about your business and I’ll show you what’s possible.
+        </p>
+
+        <form
+          action="https://formspree.io/f/xojrvwwb"
+          method="POST"
+          className="max-w-xl mx-auto space-y-4 text-left"
+        >
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Lead - Apex Web Design"
+          />
+
+          <input
+            name="name"
+            required
+            placeholder="Name"
+            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
+          />
+
+          <input
+            name="email"
+            required
+            type="email"
+            placeholder="Email"
+            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
+          />
+
+          <textarea
+            name="message"
+            required
+            rows="5"
+            placeholder="Tell me about your project"
+            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
+          />
+
+          <button
+            type="submit"
+            className="w-full bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all"
+          >
+            Get My Free Website Quote
+          </button>
+        </form>
       </section>
     </div>
   );
