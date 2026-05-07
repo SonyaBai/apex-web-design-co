@@ -30,55 +30,19 @@ export default function App() {
   ];
 
   const benefits = [
-    [
-      "01",
-      "More Qualified Leads",
-      "Designed to guide visitors toward calls, forms, and booked appointments.",
-    ],
-    [
-      "02",
-      "Premium Credibility",
-      "A polished site makes your business feel trusted and established.",
-    ],
-    [
-      "03",
-      "SEO-Ready Structure",
-      "Built with clean sections, keywords, speed, and local visibility in mind.",
-    ],
-    [
-      "04",
-      "Faster User Experience",
-      "Clear layouts and fast pages help visitors stay longer and take action.",
-    ],
-    [
-      "05",
-      "Mobile-First Design",
-      "Your site looks strong on phones, where most local customers are searching.",
-    ],
-    [
-      "06",
-      "Built to Scale",
-      "Ready for future services, ads, SEO campaigns, and business growth.",
-    ],
+    ["01", "More Qualified Leads", "Designed to guide visitors toward calls, forms, and booked appointments."],
+    ["02", "Premium Credibility", "A polished site makes your business feel trusted and established."],
+    ["03", "SEO-Ready Structure", "Built with clean sections, keywords, speed, and local visibility in mind."],
+    ["04", "Faster User Experience", "Clear layouts and fast pages help visitors stay longer and take action."],
+    ["05", "Mobile-First Design", "Your site looks strong on phones, where most local customers are searching."],
+    ["06", "Built to Scale", "Ready for future services, ads, SEO campaigns, and business growth."],
   ];
 
   const faqs = [
-    [
-      "How long does a website take?",
-      "Most small business websites can be completed in 7–14 days depending on pages, content, and revisions.",
-    ],
-    [
-      "Will my website be mobile-friendly?",
-      "Yes. Every site is built to look polished on phones, tablets, and desktop screens.",
-    ],
-    [
-      "Can you redesign my current website?",
-      "Yes. I can modernize an outdated website and make it stronger for leads, trust, and usability.",
-    ],
-    [
-      "Do you include SEO?",
-      "Your website is built with SEO-ready structure, clean sections, service keywords, and local visibility in mind.",
-    ],
+    ["How long does a website take?", "Most small business websites can be completed in 7–14 days depending on pages, content, and revisions."],
+    ["Will my website be mobile-friendly?", "Yes. Every site is built to look polished on phones, tablets, and desktop screens."],
+    ["Can you redesign my current website?", "Yes. I can modernize an outdated website and make it stronger for leads, trust, and usability."],
+    ["Do you include SEO?", "Your website is built with SEO-ready structure, clean sections, service keywords, and local visibility in mind."],
   ];
 
   return (
@@ -190,14 +154,16 @@ export default function App() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-28 px-6 max-w-7xl mx-auto">
-        <div className="mb-16">
-          <p className="text-fuchsia-400 uppercase tracking-[0.3em] text-xs mb-4">
+      {/* SERVICES - UPDATED TO MATCH REFERENCE */}
+      <section className="relative py-28 px-6 max-w-7xl mx-auto">
+        <div className="absolute right-0 top-20 h-[500px] w-[500px] rounded-full bg-fuchsia-600/10 blur-[130px]" />
+
+        <div className="relative mb-16">
+          <p className="text-fuchsia-400 uppercase tracking-[0.3em] text-sm font-semibold mb-4">
             Services
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold max-w-5xl leading-tight">
+          <h2 className="text-4xl md:text-6xl font-bold max-w-5xl leading-tight">
             Premium websites designed to look elevated and convert visitors into customers.
           </h2>
 
@@ -207,29 +173,25 @@ export default function App() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="relative grid lg:grid-cols-3 gap-10">
           {services.map((service) => (
             <div key={service.title} className="group">
-              {/* IMAGE CARD */}
-              <div className="relative overflow-hidden rounded-[2rem] border border-fuchsia-500/30 bg-[#0a0a0a] shadow-[0_25px_80px_rgba(168,85,247,.15)]">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,70,239,.16),transparent_55%)] z-10 pointer-events-none" />
-
+              <div className="relative overflow-hidden rounded-[2rem] border border-fuchsia-500/35 bg-[#090909] shadow-[0_25px_80px_rgba(168,85,247,.18)]">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className={`w-full h-[520px] transition duration-700 group-hover:scale-[1.03] ${
+                  className={`w-full h-[430px] transition duration-700 group-hover:scale-[1.035] ${
                     service.title === "Website Redesign"
-                      ? "object-cover object-center brightness-110"
-                      : "object-cover object-top brightness-95"
+                      ? "object-cover object-center brightness-125 contrast-110"
+                      : "object-cover object-top brightness-110"
                   }`}
                 />
               </div>
 
-              {/* TEXT BELOW IMAGE */}
               <div className="pt-8">
-                <div className="h-[3px] w-16 bg-fuchsia-500 rounded-full mb-6 shadow-[0_0_20px_rgba(217,70,239,.8)]" />
+                <div className="h-[3px] w-16 bg-fuchsia-500 rounded-full mb-6 shadow-[0_0_22px_rgba(217,70,239,.85)]" />
 
-                <h3 className="text-4xl font-bold mb-5">
+                <h3 className="text-3xl md:text-4xl font-bold mb-5">
                   {service.title}
                 </h3>
 
