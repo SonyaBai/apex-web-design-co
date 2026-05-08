@@ -318,6 +318,32 @@ h2 span {
   line-height: 1.6;
 }
 
+.promo-note {
+  margin-top: 18px;
+  color: #050505;
+  font-weight: 800;
+}
+
+.pricing-chart {
+  margin-top: 42px;
+}
+
+.pricing-chart img {
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(5, 5, 5, 0.14);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 48px rgba(5, 5, 5, 0.14);
+}
+
+.pricing-chart p {
+  margin: 12px 0 0;
+  color: rgba(5, 5, 5, 0.58);
+  font-size: 0.95rem;
+  text-align: right;
+}
+
 .faq {
   background: #050505;
 }

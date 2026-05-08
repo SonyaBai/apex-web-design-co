@@ -150,10 +150,18 @@ export default function App() {
               Perfect for a local service business that needs a credible, modern site with a sharp homepage,
               service section, mobile layout, and quote-focused contact flow.
             </p>
+            <p className="promo-note">Contact us Today for Current Promotions and New Business Discounts!</p>
           </div>
           <a className="button button-dark" href="#contact">
             Ask About Pricing
           </a>
+        </div>
+        <div className="container pricing-chart">
+          <img
+            src="/website-redesign-cost-chart-savvy-panda.png"
+            alt="Website redesign cost chart created by Savvy Panda"
+          />
+          <p>Chart credit: Savvy Panda.</p>
         </div>
       </section>
 
