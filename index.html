@@ -3,10 +3,576 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Apex Web Design builds premium, SEO-ready websites for service businesses that need more leads, calls, and revenue."
+    />
     <title>Apex Web Design</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #050505;
+        --text: #ffffff;
+        --muted: rgba(255, 255, 255, 0.72);
+        --line: rgba(255, 255, 255, 0.14);
+        --panel: rgba(255, 255, 255, 0.06);
+        --accent: #f0abfc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      img,
+      video {
+        max-width: 100%;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        overflow-wrap: anywhere;
+      }
+
+      .site-shell {
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .container {
+        width: min(1120px, 100%);
+        margin: 0 auto;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 92vh;
+        display: flex;
+        align-items: center;
+        padding: 80px 24px;
+        isolation: isolate;
+      }
+
+      .hero-video,
+      .hero::after {
+        position: absolute;
+        inset: 0;
+      }
+
+      .hero-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.62;
+        z-index: -2;
+      }
+
+      .hero::after {
+        content: "";
+        background:
+          linear-gradient(90deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.34)),
+          linear-gradient(0deg, rgba(0, 0, 0, 0.78), transparent 46%);
+        z-index: -1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .eyebrow {
+        margin: 0 0 18px;
+        color: var(--accent);
+        font-size: 0.86rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 930px;
+        margin: 0;
+        font-size: clamp(3rem, 8vw, 6.25rem);
+        line-height: 0.96;
+        font-weight: 900;
+      }
+
+      h1 span {
+        display: block;
+        color: var(--accent);
+      }
+
+      h2 {
+        max-width: 900px;
+        margin: 0 0 42px;
+        font-size: clamp(2.35rem, 6vw, 4.5rem);
+        line-height: 1;
+      }
+
+      h2 span {
+        color: rgba(255, 255, 255, 0.56);
+      }
+
+      .hero-copy {
+        max-width: 700px;
+        margin: 26px 0 0;
+        color: var(--muted);
+        font-size: clamp(1.12rem, 2.4vw, 1.38rem);
+        line-height: 1.5;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
+        margin-top: 34px;
+        padding: 16px 28px;
+        border-radius: 999px;
+        background: #ffffff;
+        color: #050505;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
+      }
+
+      .button-dark {
+        background: #050505;
+        color: #ffffff;
+      }
+
+      .band {
+        border-block: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .stats {
+        padding: 26px 24px;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .stats-grid div {
+        display: grid;
+        gap: 6px;
+      }
+
+      .stats-grid strong {
+        color: var(--accent);
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
+        line-height: 1;
+      }
+
+      .stats-grid span {
+        color: var(--muted);
+      }
+
+      .section {
+        padding: 88px 24px;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .card,
+      .faq-item {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 24px;
+      }
+
+      .card h3,
+      .faq-item h3 {
+        margin: 0 0 12px;
+        font-size: 1.25rem;
+      }
+
+      .card p,
+      .faq-item p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .preview-frame {
+        overflow: hidden;
+        border: 1px solid rgba(217, 70, 239, 0.45);
+        border-radius: 24px;
+        background: #111111;
+        box-shadow: 0 0 80px rgba(217, 70, 239, 0.2);
+      }
+
+      .preview-frame img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .recent-work {
+        border-top: 1px solid var(--line);
+        background:
+          linear-gradient(135deg, rgba(240, 171, 252, 0.12), rgba(255, 255, 255, 0.03) 42%),
+          #080808;
+      }
+
+      .work-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 32px;
+        align-items: end;
+        border: 1px solid rgba(240, 171, 252, 0.24);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.055);
+        padding: clamp(24px, 5vw, 44px);
+      }
+
+      .work-panel h2 {
+        margin-bottom: 18px;
+      }
+
+      .work-panel p:not(.eyebrow) {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.12rem;
+        line-height: 1.6;
+      }
+
+      .split {
+        border-top: 1px solid var(--line);
+        background: #0a0a0a;
+      }
+
+      .split-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1fr);
+        gap: 46px;
+        align-items: start;
+      }
+
+      .timeline {
+        border-top: 1px solid var(--line);
+      }
+
+      .timeline-row {
+        display: grid;
+        grid-template-columns: 76px 1fr;
+        align-items: center;
+        min-height: 76px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .timeline-row span {
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .timeline-row p {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .pricing {
+        background:
+          radial-gradient(circle at 20% 0%, rgba(217, 70, 239, 0.2), transparent 34%),
+          #ffffff;
+        color: #050505;
+      }
+
+      .pricing .eyebrow {
+        color: #8a128e;
+      }
+
+      .pricing-panel {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 32px;
+      }
+
+      .pricing h2 {
+        margin-bottom: 18px;
+      }
+
+      .pricing p:not(.eyebrow) {
+        max-width: 720px;
+        margin: 0;
+        color: rgba(5, 5, 5, 0.68);
+        font-size: 1.12rem;
+        line-height: 1.6;
+      }
+
+      .promo-note {
+        margin-top: 18px;
+        color: #050505;
+        font-weight: 800;
+      }
+
+      .pricing-chart {
+        margin-top: 42px;
+      }
+
+      .pricing-chart img {
+        display: block;
+        width: 100%;
+        border: 1px solid rgba(5, 5, 5, 0.14);
+        border-radius: 8px;
+        background: #ffffff;
+        box-shadow: 0 18px 48px rgba(5, 5, 5, 0.14);
+      }
+
+      .pricing-chart p {
+        margin: 12px 0 0;
+        color: rgba(5, 5, 5, 0.58);
+        font-size: 0.95rem;
+        text-align: right;
+      }
+
+      .faq-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .contact {
+        padding: 86px 24px 96px;
+        text-align: center;
+        background:
+          radial-gradient(circle at 50% 0%, rgba(217, 70, 239, 0.18), transparent 36%),
+          linear-gradient(#050505, #170020);
+      }
+
+      .contact h2 {
+        margin-inline: auto;
+        margin-bottom: 18px;
+        font-size: clamp(2.2rem, 5vw, 3rem);
+      }
+
+      .contact p {
+        max-width: 640px;
+        margin: 0 auto;
+        color: var(--muted);
+        font-size: 1.18rem;
+        line-height: 1.55;
+      }
+
+      @media (max-width: 760px) {
+        .hero {
+          min-height: 88vh;
+          padding: 64px 18px;
+        }
+
+        .button {
+          width: 100%;
+          max-width: 360px;
+        }
+
+        .stats-grid,
+        .service-grid,
+        .work-panel,
+        .split-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section,
+        .contact,
+        .stats {
+          padding-inline: 18px;
+        }
+
+        .pricing-panel {
+          display: block;
+        }
+
+        .preview-frame {
+          border-radius: 16px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <main class="site-shell">
+      <section class="hero" aria-label="Apex Web Design">
+        <video class="hero-video" autoplay muted loop playsinline poster="public/services-preview.png">
+          <source src="public/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        <div class="container hero-content">
+          <p class="eyebrow">Premium websites for service businesses</p>
+          <h1>
+            Websites Built to Grow
+            <span>Your Business</span>
+          </h1>
+          <p class="hero-copy">
+            High-end, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
+          </p>
+          <a class="button" href="#contact">Get My Free Website Quote</a>
+        </div>
+      </section>
+
+      <section class="stats band">
+        <div class="container stats-grid">
+          <div>
+            <strong>24/7</strong>
+            <span>Your best salesperson online</span>
+          </div>
+          <div>
+            <strong>Fast</strong>
+            <span>Pages designed for quick loading</span>
+          </div>
+          <div>
+            <strong>Mobile</strong>
+            <span>Layouts made for phone-first buyers</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <p class="eyebrow">Services</p>
+          <h2>Premium Design. <span>Built to Convert.</span></h2>
+
+          <div class="service-grid">
+            <article class="card">
+              <h3>Custom Website Design</h3>
+              <p>A polished site built around your offer, your market, and the actions you want visitors to take.</p>
+            </article>
+            <article class="card">
+              <h3>SEO Foundations</h3>
+              <p>Clean structure, fast pages, strong headings, and local search basics so customers can find you.</p>
+            </article>
+            <article class="card">
+              <h3>Lead-Focused Pages</h3>
+              <p>Clear calls to action, trust-building sections, and layouts that make it easy to request a quote.</p>
+            </article>
+          </div>
+
+          <div class="preview-frame">
+            <img src="public/services-preview.png" alt="Apex Web Design services preview" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section recent-work">
+        <div class="container work-panel">
+          <div>
+            <p class="eyebrow">Recent Work</p>
+            <h2>Elevate Auto & Diesel Repair.</h2>
+            <p>
+              A service-business website built to make the shop look credible, help local drivers understand
+              the offer quickly, and move visitors toward contacting the team.
+            </p>
+          </div>
+          <a
+            class="button"
+            href="https://www.elevateautoanddieselrepair.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Live Site
+          </a>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Process</p>
+            <h2>A clear path from idea to launch.</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-row">
+              <span>01</span>
+              <p>Discovery call</p>
+            </div>
+            <div class="timeline-row">
+              <span>02</span>
+              <p>Homepage direction</p>
+            </div>
+            <div class="timeline-row">
+              <span>03</span>
+              <p>Full site build</p>
+            </div>
+            <div class="timeline-row">
+              <span>04</span>
+              <p>Launch support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing">
+        <div class="container pricing-panel">
+          <div>
+            <p class="eyebrow">Starter Package</p>
+            <h2>Launch-ready website essentials.</h2>
+            <p>
+              Perfect for a local service business that needs a credible, modern site with a sharp homepage,
+              service section, mobile layout, and quote-focused contact flow.
+            </p>
+            <p class="promo-note">Contact us Today for Current Promotions and New Business Discounts!</p>
+          </div>
+          <a class="button button-dark" href="#contact">Ask About Pricing</a>
+        </div>
+        <div class="container pricing-chart">
+          <img
+            src="public/website-redesign-cost-chart-savvy-panda.png"
+            alt="Website redesign cost chart created by Savvy Panda"
+          />
+          <p>Chart credit: Savvy Panda.</p>
+        </div>
+      </section>
+
+      <section class="section faq">
+        <div class="container">
+          <p class="eyebrow">Questions</p>
+          <h2>Simple answers before we start.</h2>
+          <div class="faq-list">
+            <article class="faq-item">
+              <h3>How long does a website take?</h3>
+              <p>Most starter sites can launch in one to three weeks once content, photos, and direction are ready.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Can you improve an existing site?</h3>
+              <p>Yes. Apex can refresh the design, tighten the message, improve speed, and make the site easier to update.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Do you help with mobile design?</h3>
+              <p>Every layout is built for phones first, then refined for tablets and desktop screens.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <p class="eyebrow">Start here</p>
+          <h2>Let's build your next website</h2>
+          <p>Tell me about your business and I will show you what is possible.</p>
+          <a class="button" href="mailto:hello@apexwebdesignco.com">Email Apex Web Design</a>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
