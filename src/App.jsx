@@ -13,6 +13,10 @@ const services = [
     title: "Lead-Focused Pages",
     text: "Clear calls to action, trust-building sections, and layouts that make it easy to request a quote.",
   },
+  {
+    title: "Monthly Growth Care",
+    text: "Premium hosting, ongoing SEO support, performance monitoring, and site updates bundled into one predictable monthly plan.",
+  },
 ];
 
 const processSteps = [
@@ -93,8 +97,77 @@ export default function App() {
             ))}
           </div>
 
-          <div className="preview-frame">
-            <img src="/services-preview.png" alt="Apex Web Design services preview" />
+          <div className="preview-frame k9-preview">
+            <div className="mock-nav">
+              <div>
+                <strong>K9 Elite</strong>
+                <span>Training</span>
+              </div>
+              <a href="#contact">Get Started</a>
+            </div>
+            <div className="mock-hero">
+              <div>
+                <p className="eyebrow">Website Redesign</p>
+                <h3>Calm. Obedient. Confident.</h3>
+                <p>Professional dog training programs designed for real-world results.</p>
+              </div>
+              <div className="mock-photo-stack">
+                <img
+                  src="/dog-website-real.png"
+                  alt="Two real Belgian Malinois dogs sitting on a wooded road"
+                />
+                <img
+                  src="/dog-website-real-2.jpg"
+                  alt="Belgian Malinois training photo"
+                />
+              </div>
+            </div>
+            <div className="mock-services">
+              <span>Puppy Training</span>
+              <span>Basic Obedience</span>
+              <span>Behavior Modification</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section recent-work">
+        <div className="container examples-section">
+          <p className="eyebrow">Website Examples</p>
+          <h2>
+            More visual directions for service brands.
+          </h2>
+          <div className="examples-grid">
+            <article>
+              <img
+                src="/website-examples-service-business.png"
+                alt="Service business website sample layouts"
+              />
+              <div>
+                <h3>High-converting service pages</h3>
+                <p>Clean layouts for renovation, home service, and lead-focused businesses.</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="/website-examples-luxury-construction.png"
+                alt="Luxury and construction website sample layouts"
+              />
+              <div>
+                <h3>Luxury and construction direction</h3>
+                <p>Dark premium compositions for builders, contractors, and high-ticket offers.</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="/website-examples-hvac.png"
+                alt="HVAC and heating business website sample layouts"
+              />
+              <div>
+                <h3>HVAC and home comfort brands</h3>
+                <p>Trust-forward designs for heating, cooling, and repair companies.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -150,6 +223,10 @@ export default function App() {
               Perfect for a local service business that needs a credible, modern site with a sharp homepage,
               service section, mobile layout, and quote-focused contact flow.
             </p>
+            <p>
+              Monthly growth care is available for businesses that want hosting, SEO support, performance
+              monitoring, and site updates handled under one polished plan.
+            </p>
             <p className="promo-note">Contact us Today for Current Promotions and New Business Discounts!</p>
           </div>
           <a className="button button-dark" href="#contact">
@@ -157,11 +234,51 @@ export default function App() {
           </a>
         </div>
         <div className="container pricing-chart">
-          <img
-            src="/website-redesign-cost-chart-savvy-panda.png"
-            alt="Website redesign cost chart created by Savvy Panda"
-          />
-          <p>Chart credit: Savvy Panda.</p>
+          <div className="chart-heading">
+            <p className="eyebrow">Website Redesign Cost Guide</p>
+            <h3>Typical redesign investment ranges</h3>
+            <p>
+              These ranges are general planning estimates. Your quote depends on page count, content,
+              integrations, functionality, and launch needs.
+            </p>
+          </div>
+
+          <div className="chart-grid" role="table" aria-label="Website redesign cost guide">
+            <div className="chart-row chart-header" role="row">
+              <span role="columnheader">Website Size</span>
+              <span role="columnheader">Base Design</span>
+              <span role="columnheader">Migration</span>
+              <span role="columnheader">Marketing Strategy</span>
+              <span role="columnheader">Custom Template</span>
+              <span role="columnheader">Content</span>
+            </div>
+            <div className="chart-row" role="row">
+              <strong role="cell">Large</strong>
+              <span role="cell">$15k-$25k</span>
+              <span role="cell">+$6k-$10k</span>
+              <span role="cell">+$6k-$8k</span>
+              <span role="cell">+$3k-$8k</span>
+              <span role="cell">+$6k-$10k</span>
+            </div>
+            <div className="chart-row" role="row">
+              <strong role="cell">Medium</strong>
+              <span role="cell">$9k-$15k</span>
+              <span role="cell">+$4k-$6k</span>
+              <span role="cell">+$4k-$6k</span>
+              <span role="cell">+$3k-$7k</span>
+              <span role="cell">+$4k-$7k</span>
+            </div>
+            <div className="chart-row" role="row">
+              <strong role="cell">Small</strong>
+              <span role="cell">$3k-$5k</span>
+              <span role="cell">+$2k-$5k</span>
+              <span role="cell">+$3k-$5k</span>
+              <span role="cell">+$2k-$5k</span>
+              <span role="cell">+$2k-$4k</span>
+            </div>
+          </div>
+
+          <p className="chart-credit">Original pricing chart reference credited to Savvy Panda.</p>
         </div>
       </section>
 
@@ -188,7 +305,7 @@ export default function App() {
           <h2>Let's build your next website</h2>
           <p>Tell me about your business and I will show you what is possible.</p>
           <a className="button" href="mailto:hello@apexwebdesignco.com">
-            Email Apex Web Design
+            Contact Apex Web Design
           </a>
         </div>
       </section>

@@ -189,7 +189,7 @@
 
       .service-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 16px;
         margin-bottom: 28px;
       }
@@ -227,6 +227,173 @@
         display: block;
         width: 100%;
         height: auto;
+      }
+
+      .k9-preview {
+        position: relative;
+        display: grid;
+        background:
+          linear-gradient(135deg, rgba(240, 171, 252, 0.16), rgba(255, 255, 255, 0.04)),
+          #080808;
+      }
+
+      .mock-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 22px clamp(18px, 4vw, 36px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .mock-nav div {
+        display: grid;
+        gap: 2px;
+      }
+
+      .mock-nav strong {
+        color: #ffffff;
+        font-size: clamp(1.2rem, 3vw, 1.8rem);
+        text-transform: uppercase;
+      }
+
+      .mock-nav span {
+        color: #f0abfc;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .mock-nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 44px;
+        padding: 12px 18px;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #050505;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .mock-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.88fr) minmax(320px, 1.12fr);
+        min-height: 460px;
+      }
+
+      .mock-hero > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(26px, 5vw, 52px);
+        background: linear-gradient(90deg, rgba(5, 5, 5, 0.95), rgba(5, 5, 5, 0.54));
+      }
+
+      .mock-hero h3 {
+        max-width: 460px;
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(2.4rem, 6vw, 4.9rem);
+        line-height: 0.98;
+      }
+
+      .mock-hero p:not(.eyebrow) {
+        max-width: 420px;
+        margin: 22px 0 0;
+        color: var(--muted);
+        font-size: 1.16rem;
+        line-height: 1.5;
+      }
+
+      .mock-photo-stack {
+        position: relative;
+        min-height: 460px;
+      }
+
+      .mock-photo-stack img {
+        width: 100%;
+        height: 100%;
+        min-height: 460px;
+        object-fit: cover;
+        object-position: center 68%;
+      }
+
+      .mock-photo-stack img + img {
+        position: absolute;
+        right: clamp(18px, 4vw, 36px);
+        bottom: clamp(18px, 4vw, 36px);
+        width: min(34%, 260px);
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 4 / 3;
+        border: 3px solid rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 18px 46px rgba(0, 0, 0, 0.45);
+        object-fit: cover;
+        object-position: center center;
+      }
+
+      .mock-services {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(5, 5, 5, 0.88);
+      }
+
+      .mock-services span {
+        min-height: 82px;
+        display: grid;
+        place-items: center;
+        padding: 18px;
+        color: #ffffff;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .mock-services span + span {
+        border-left: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .examples-section h2 {
+        margin-bottom: 26px;
+      }
+
+      .examples-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .examples-grid article {
+        overflow: hidden;
+        border: 1px solid rgba(240, 171, 252, 0.22);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.055);
+      }
+
+      .examples-grid img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 5.2;
+        object-fit: cover;
+        background: #ffffff;
+      }
+
+      .examples-grid div {
+        padding: 22px;
+      }
+
+      .examples-grid h3 {
+        margin: 0 0 8px;
+        color: #ffffff;
+        font-size: 1.24rem;
+      }
+
+      .examples-grid p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
       }
 
       .recent-work {
@@ -332,18 +499,83 @@
 
       .pricing-chart {
         margin-top: 42px;
+        border: 1px solid rgba(138, 18, 142, 0.18);
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, rgba(138, 18, 142, 0.08), rgba(255, 255, 255, 0.88) 34%),
+          #ffffff;
+        padding: clamp(18px, 3vw, 28px);
+        box-shadow: 0 18px 48px rgba(5, 5, 5, 0.12);
       }
 
-      .pricing-chart img {
-        display: block;
-        width: 100%;
-        border: 1px solid rgba(5, 5, 5, 0.14);
+      .chart-heading {
+        display: grid;
+        gap: 10px;
+        margin-bottom: 22px;
+      }
+
+      .chart-heading .eyebrow {
+        margin: 0;
+      }
+
+      .chart-heading h3 {
+        margin: 0;
+        color: #050505;
+        font-size: clamp(1.7rem, 4vw, 2.7rem);
+        line-height: 1;
+      }
+
+      .chart-heading p:not(.eyebrow) {
+        max-width: 820px;
+        margin: 0;
+        color: rgba(5, 5, 5, 0.66);
+        line-height: 1.55;
+      }
+
+      .chart-grid {
+        overflow: hidden;
+        border: 1px solid rgba(5, 5, 5, 0.12);
         border-radius: 8px;
         background: #ffffff;
-        box-shadow: 0 18px 48px rgba(5, 5, 5, 0.14);
       }
 
-      .pricing-chart p {
+      .chart-row {
+        display: grid;
+        grid-template-columns: 0.9fr repeat(5, minmax(110px, 1fr));
+      }
+
+      .chart-row + .chart-row {
+        border-top: 1px solid rgba(5, 5, 5, 0.1);
+      }
+
+      .chart-row > * {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        padding: 14px;
+        color: rgba(5, 5, 5, 0.78);
+        font-weight: 700;
+        line-height: 1.25;
+      }
+
+      .chart-row > * + * {
+        border-left: 1px solid rgba(5, 5, 5, 0.1);
+      }
+
+      .chart-header > * {
+        min-height: 58px;
+        background: #170020;
+        color: #ffffff;
+        font-size: 0.9rem;
+      }
+
+      .chart-row strong {
+        background: rgba(240, 171, 252, 0.28);
+        color: #8a128e;
+        font-size: 1.25rem;
+      }
+
+      .chart-credit {
         margin: 12px 0 0;
         color: rgba(5, 5, 5, 0.58);
         font-size: 0.95rem;
@@ -390,8 +622,11 @@
 
         .stats-grid,
         .service-grid,
+        .examples-grid,
         .work-panel,
-        .split-grid {
+        .split-grid,
+        .mock-hero,
+        .mock-services {
           grid-template-columns: 1fr;
         }
 
@@ -405,8 +640,34 @@
           display: block;
         }
 
+        .pricing-chart {
+          overflow-x: auto;
+        }
+
+        .chart-grid {
+          min-width: 760px;
+        }
+
         .preview-frame {
           border-radius: 16px;
+        }
+
+        .mock-photo-stack,
+        .mock-photo-stack img {
+          min-height: 420px;
+        }
+
+        .mock-photo-stack img {
+          object-position: center 72%;
+        }
+
+        .mock-photo-stack img + img {
+          width: 42%;
+        }
+
+        .mock-services span + span {
+          border-left: 0;
+          border-top: 1px solid rgba(255, 255, 255, 0.12);
         }
       }
     </style>
@@ -466,10 +727,81 @@
               <h3>Lead-Focused Pages</h3>
               <p>Clear calls to action, trust-building sections, and layouts that make it easy to request a quote.</p>
             </article>
+            <article class="card">
+              <h3>Monthly Growth Care</h3>
+              <p>Premium hosting, ongoing SEO support, performance monitoring, and site updates bundled into one predictable monthly plan.</p>
+            </article>
           </div>
 
-          <div class="preview-frame">
-            <img src="public/services-preview.png" alt="Apex Web Design services preview" />
+          <div class="preview-frame k9-preview">
+            <div class="mock-nav">
+              <div>
+                <strong>K9 Elite</strong>
+                <span>Training</span>
+              </div>
+              <a href="#contact">Get Started</a>
+            </div>
+            <div class="mock-hero">
+              <div>
+                <p class="eyebrow">Website Redesign</p>
+                <h3>Calm. Obedient. Confident.</h3>
+                <p>Professional dog training programs designed for real-world results.</p>
+              </div>
+              <div class="mock-photo-stack">
+                <img
+                  src="public/dog-website-real.png"
+                  alt="Two real Belgian Malinois dogs sitting on a wooded road"
+                />
+                <img
+                  src="public/dog-website-real-2.jpg"
+                  alt="Belgian Malinois training photo"
+                />
+              </div>
+            </div>
+            <div class="mock-services">
+              <span>Puppy Training</span>
+              <span>Basic Obedience</span>
+              <span>Behavior Modification</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section recent-work">
+        <div class="container examples-section">
+          <p class="eyebrow">Website Examples</p>
+          <h2>More visual directions for service brands.</h2>
+          <div class="examples-grid">
+            <article>
+              <img
+                src="public/website-examples-service-business.png"
+                alt="Service business website sample layouts"
+              />
+              <div>
+                <h3>High-converting service pages</h3>
+                <p>Clean layouts for renovation, home service, and lead-focused businesses.</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="public/website-examples-luxury-construction.png"
+                alt="Luxury and construction website sample layouts"
+              />
+              <div>
+                <h3>Luxury and construction direction</h3>
+                <p>Dark premium compositions for builders, contractors, and high-ticket offers.</p>
+              </div>
+            </article>
+            <article>
+              <img
+                src="public/website-examples-hvac.png"
+                alt="HVAC and heating business website sample layouts"
+              />
+              <div>
+                <h3>HVAC and home comfort brands</h3>
+                <p>Trust-forward designs for heating, cooling, and repair companies.</p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -531,16 +863,60 @@
               Perfect for a local service business that needs a credible, modern site with a sharp homepage,
               service section, mobile layout, and quote-focused contact flow.
             </p>
+            <p>
+              Monthly growth care is available for businesses that want hosting, SEO support, performance
+              monitoring, and site updates handled under one polished plan.
+            </p>
             <p class="promo-note">Contact us Today for Current Promotions and New Business Discounts!</p>
           </div>
           <a class="button button-dark" href="#contact">Ask About Pricing</a>
         </div>
         <div class="container pricing-chart">
-          <img
-            src="public/website-redesign-cost-chart-savvy-panda.png"
-            alt="Website redesign cost chart created by Savvy Panda"
-          />
-          <p>Chart credit: Savvy Panda.</p>
+          <div class="chart-heading">
+            <p class="eyebrow">Website Redesign Cost Guide</p>
+            <h3>Typical redesign investment ranges</h3>
+            <p>
+              These ranges are general planning estimates. Your quote depends on page count, content,
+              integrations, functionality, and launch needs.
+            </p>
+          </div>
+
+          <div class="chart-grid" role="table" aria-label="Website redesign cost guide">
+            <div class="chart-row chart-header" role="row">
+              <span role="columnheader">Website Size</span>
+              <span role="columnheader">Base Design</span>
+              <span role="columnheader">Migration</span>
+              <span role="columnheader">Marketing Strategy</span>
+              <span role="columnheader">Custom Template</span>
+              <span role="columnheader">Content</span>
+            </div>
+            <div class="chart-row" role="row">
+              <strong role="cell">Large</strong>
+              <span role="cell">$15k-$25k</span>
+              <span role="cell">+$6k-$10k</span>
+              <span role="cell">+$6k-$8k</span>
+              <span role="cell">+$3k-$8k</span>
+              <span role="cell">+$6k-$10k</span>
+            </div>
+            <div class="chart-row" role="row">
+              <strong role="cell">Medium</strong>
+              <span role="cell">$9k-$15k</span>
+              <span role="cell">+$4k-$6k</span>
+              <span role="cell">+$4k-$6k</span>
+              <span role="cell">+$3k-$7k</span>
+              <span role="cell">+$4k-$7k</span>
+            </div>
+            <div class="chart-row" role="row">
+              <strong role="cell">Small</strong>
+              <span role="cell">$3k-$5k</span>
+              <span role="cell">+$2k-$5k</span>
+              <span role="cell">+$3k-$5k</span>
+              <span role="cell">+$2k-$5k</span>
+              <span role="cell">+$2k-$4k</span>
+            </div>
+          </div>
+
+          <p class="chart-credit">Original pricing chart reference credited to Savvy Panda.</p>
         </div>
       </section>
 
@@ -570,7 +946,7 @@
           <p class="eyebrow">Start here</p>
           <h2>Let's build your next website</h2>
           <p>Tell me about your business and I will show you what is possible.</p>
-          <a class="button" href="mailto:hello@apexwebdesignco.com">Email Apex Web Design</a>
+          <a class="button" href="mailto:hello@apexwebdesignco.com">Contact Apex Web Design</a>
         </div>
       </section>
     </main>
