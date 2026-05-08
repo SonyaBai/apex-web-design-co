@@ -99,6 +99,29 @@ export default function App() {
         </div>
       </section>
 
+      <section className="section recent-work">
+        <div className="container work-panel">
+          <div>
+            <p className="eyebrow">Recent Work</p>
+            <h2>
+              Elevate Auto & Diesel Repair.
+            </h2>
+            <p>
+              A service-business website built to make the shop look credible, help local drivers understand
+              the offer quickly, and move visitors toward contacting the team.
+            </p>
+          </div>
+          <a
+            className="button"
+            href="https://www.elevateautoanddieselrepair.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Live Site
+          </a>
+        </div>
+      </section>
+
       <section className="section split">
         <div className="container split-grid">
           <div>

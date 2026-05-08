@@ -229,6 +229,36 @@
         height: auto;
       }
 
+      .recent-work {
+        border-top: 1px solid var(--line);
+        background:
+          linear-gradient(135deg, rgba(240, 171, 252, 0.12), rgba(255, 255, 255, 0.03) 42%),
+          #080808;
+      }
+
+      .work-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 32px;
+        align-items: end;
+        border: 1px solid rgba(240, 171, 252, 0.24);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.055);
+        padding: clamp(24px, 5vw, 44px);
+      }
+
+      .work-panel h2 {
+        margin-bottom: 18px;
+      }
+
+      .work-panel p:not(.eyebrow) {
+        max-width: 720px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.12rem;
+        line-height: 1.6;
+      }
+
       .split {
         border-top: 1px solid var(--line);
         background: #0a0a0a;
@@ -334,6 +364,7 @@
 
         .stats-grid,
         .service-grid,
+        .work-panel,
         .split-grid {
           grid-template-columns: 1fr;
         }
@@ -414,6 +445,27 @@
           <div class="preview-frame">
             <img src="public/services-preview.png" alt="Apex Web Design services preview" />
           </div>
+        </div>
+      </section>
+
+      <section class="section recent-work">
+        <div class="container work-panel">
+          <div>
+            <p class="eyebrow">Recent Work</p>
+            <h2>Elevate Auto & Diesel Repair.</h2>
+            <p>
+              A service-business website built to make the shop look credible, help local drivers understand
+              the offer quickly, and move visitors toward contacting the team.
+            </p>
+          </div>
+          <a
+            class="button"
+            href="https://www.elevateautoanddieselrepair.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View Live Site
+          </a>
         </div>
       </section>
 
