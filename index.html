@@ -14,6 +14,8 @@
         --bg: #050505;
         --text: #ffffff;
         --muted: rgba(255, 255, 255, 0.72);
+        --line: rgba(255, 255, 255, 0.14);
+        --panel: rgba(255, 255, 255, 0.06);
         --accent: #f0abfc;
       }
 
@@ -37,9 +39,21 @@
         max-width: 100%;
       }
 
+      h1,
+      h2,
+      h3,
+      p {
+        overflow-wrap: anywhere;
+      }
+
       .site-shell {
         min-height: 100vh;
         overflow: hidden;
+      }
+
+      .container {
+        width: min(1120px, 100%);
+        margin: 0 auto;
       }
 
       .hero {
@@ -69,13 +83,13 @@
         content: "";
         background:
           linear-gradient(90deg, rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.34)),
-          linear-gradient(0deg, rgba(0, 0, 0, 0.7), transparent 42%);
+          linear-gradient(0deg, rgba(0, 0, 0, 0.78), transparent 46%);
         z-index: -1;
       }
 
-      .container {
-        width: min(1120px, 100%);
-        margin: 0 auto;
+      .hero-content {
+        position: relative;
+        z-index: 2;
       }
 
       .eyebrow {
@@ -87,12 +101,6 @@
         text-transform: uppercase;
       }
 
-      h1,
-      h2,
-      p {
-        overflow-wrap: anywhere;
-      }
-
       h1 {
         max-width: 930px;
         margin: 0;
@@ -101,9 +109,20 @@
         font-weight: 900;
       }
 
-      .accent-line {
+      h1 span {
         display: block;
         color: var(--accent);
+      }
+
+      h2 {
+        max-width: 900px;
+        margin: 0 0 42px;
+        font-size: clamp(2.35rem, 6vw, 4.5rem);
+        line-height: 1;
+      }
+
+      h2 span {
+        color: rgba(255, 255, 255, 0.56);
       }
 
       .hero-copy {
@@ -129,19 +148,71 @@
         box-shadow: 0 16px 42px rgba(0, 0, 0, 0.24);
       }
 
-      .services {
-        padding: 88px 24px;
+      .button-dark {
+        background: #050505;
+        color: #ffffff;
       }
 
-      h2 {
-        max-width: 900px;
-        margin: 0 0 42px;
-        font-size: clamp(2.35rem, 6vw, 4.5rem);
+      .band {
+        border-block: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.035);
+      }
+
+      .stats {
+        padding: 26px 24px;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .stats-grid div {
+        display: grid;
+        gap: 6px;
+      }
+
+      .stats-grid strong {
+        color: var(--accent);
+        font-size: clamp(1.6rem, 3vw, 2.4rem);
         line-height: 1;
       }
 
-      h2 span {
-        color: rgba(255, 255, 255, 0.56);
+      .stats-grid span {
+        color: var(--muted);
+      }
+
+      .section {
+        padding: 88px 24px;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .card,
+      .faq-item {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 24px;
+      }
+
+      .card h3,
+      .faq-item h3 {
+        margin: 0 0 12px;
+        font-size: 1.25rem;
+      }
+
+      .card p,
+      .faq-item p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.55;
       }
 
       .preview-frame {
@@ -156,6 +227,76 @@
         display: block;
         width: 100%;
         height: auto;
+      }
+
+      .split {
+        border-top: 1px solid var(--line);
+        background: #0a0a0a;
+      }
+
+      .split-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1fr);
+        gap: 46px;
+        align-items: start;
+      }
+
+      .timeline {
+        border-top: 1px solid var(--line);
+      }
+
+      .timeline-row {
+        display: grid;
+        grid-template-columns: 76px 1fr;
+        align-items: center;
+        min-height: 76px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .timeline-row span {
+        color: var(--accent);
+        font-weight: 800;
+      }
+
+      .timeline-row p {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .pricing {
+        background:
+          radial-gradient(circle at 20% 0%, rgba(217, 70, 239, 0.2), transparent 34%),
+          #ffffff;
+        color: #050505;
+      }
+
+      .pricing .eyebrow {
+        color: #8a128e;
+      }
+
+      .pricing-panel {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 32px;
+      }
+
+      .pricing h2 {
+        margin-bottom: 18px;
+      }
+
+      .pricing p:not(.eyebrow) {
+        max-width: 720px;
+        margin: 0;
+        color: rgba(5, 5, 5, 0.68);
+        font-size: 1.12rem;
+        line-height: 1.6;
+      }
+
+      .faq-list {
+        display: grid;
+        gap: 14px;
       }
 
       .contact {
@@ -180,7 +321,7 @@
         line-height: 1.55;
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 760px) {
         .hero {
           min-height: 88vh;
           padding: 64px 18px;
@@ -191,9 +332,20 @@
           max-width: 360px;
         }
 
-        .services,
-        .contact {
+        .stats-grid,
+        .service-grid,
+        .split-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section,
+        .contact,
+        .stats {
           padding-inline: 18px;
+        }
+
+        .pricing-panel {
+          display: block;
         }
 
         .preview-frame {
@@ -209,11 +361,11 @@
           <source src="public/hero-video.mp4" type="video/mp4" />
         </video>
 
-        <div class="container">
+        <div class="container hero-content">
           <p class="eyebrow">Premium websites for service businesses</p>
           <h1>
             Websites Built to Grow
-            <span class="accent-line">Your Business</span>
+            <span>Your Business</span>
           </h1>
           <p class="hero-copy">
             High-end, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
@@ -222,10 +374,42 @@
         </div>
       </section>
 
-      <section class="services" id="services">
+      <section class="stats band">
+        <div class="container stats-grid">
+          <div>
+            <strong>24/7</strong>
+            <span>Your best salesperson online</span>
+          </div>
+          <div>
+            <strong>Fast</strong>
+            <span>Pages designed for quick loading</span>
+          </div>
+          <div>
+            <strong>Mobile</strong>
+            <span>Layouts made for phone-first buyers</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
         <div class="container">
           <p class="eyebrow">Services</p>
           <h2>Premium Design. <span>Built to Convert.</span></h2>
+
+          <div class="service-grid">
+            <article class="card">
+              <h3>Custom Website Design</h3>
+              <p>A polished site built around your offer, your market, and the actions you want visitors to take.</p>
+            </article>
+            <article class="card">
+              <h3>SEO Foundations</h3>
+              <p>Clean structure, fast pages, strong headings, and local search basics so customers can find you.</p>
+            </article>
+            <article class="card">
+              <h3>Lead-Focused Pages</h3>
+              <p>Clear calls to action, trust-building sections, and layouts that make it easy to request a quote.</p>
+            </article>
+          </div>
 
           <div class="preview-frame">
             <img src="public/services-preview.png" alt="Apex Web Design services preview" />
@@ -233,10 +417,74 @@
         </div>
       </section>
 
-      <section class="contact" id="contact">
+      <section class="section split">
+        <div class="container split-grid">
+          <div>
+            <p class="eyebrow">Process</p>
+            <h2>A clear path from idea to launch.</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-row">
+              <span>01</span>
+              <p>Discovery call</p>
+            </div>
+            <div class="timeline-row">
+              <span>02</span>
+              <p>Homepage direction</p>
+            </div>
+            <div class="timeline-row">
+              <span>03</span>
+              <p>Full site build</p>
+            </div>
+            <div class="timeline-row">
+              <span>04</span>
+              <p>Launch support</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section pricing">
+        <div class="container pricing-panel">
+          <div>
+            <p class="eyebrow">Starter Package</p>
+            <h2>Launch-ready website essentials.</h2>
+            <p>
+              Perfect for a local service business that needs a credible, modern site with a sharp homepage,
+              service section, mobile layout, and quote-focused contact flow.
+            </p>
+          </div>
+          <a class="button button-dark" href="#contact">Ask About Pricing</a>
+        </div>
+      </section>
+
+      <section class="section faq">
         <div class="container">
+          <p class="eyebrow">Questions</p>
+          <h2>Simple answers before we start.</h2>
+          <div class="faq-list">
+            <article class="faq-item">
+              <h3>How long does a website take?</h3>
+              <p>Most starter sites can launch in one to three weeks once content, photos, and direction are ready.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Can you improve an existing site?</h3>
+              <p>Yes. Apex can refresh the design, tighten the message, improve speed, and make the site easier to update.</p>
+            </article>
+            <article class="faq-item">
+              <h3>Do you help with mobile design?</h3>
+              <p>Every layout is built for phones first, then refined for tablets and desktop screens.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <div class="container">
+          <p class="eyebrow">Start here</p>
           <h2>Let's build your next website</h2>
           <p>Tell me about your business and I will show you what is possible.</p>
+          <a class="button" href="mailto:hello@apexwebdesignco.com">Email Apex Web Design</a>
         </div>
       </section>
     </main>
