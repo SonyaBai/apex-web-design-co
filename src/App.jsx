@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const services = [
   {
@@ -41,9 +41,60 @@ const faqs = [
   },
 ];
 
+const menuItems = [
+  { label: "Services", href: "#services", detail: "Design, SEO, hosting, and care" },
+  { label: "Case Studies", href: "#case-studies", detail: "Recent client work and outcomes" },
+  { label: "Work by Industry", href: "#work-by-industry", detail: "Visual directions for service brands" },
+  { label: "Digital Trends", href: "#digital-trends", detail: "What modern buyers expect online" },
+  { label: "About", href: "#about", detail: "How Apex builds trust-first websites" },
+  { label: "Contact", href: "#contact", detail: "Start an information request" },
+];
+
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <main className="site-shell">
+      <div className="site-nav">
+        <button className="menu-trigger" type="button" onClick={() => setMenuOpen(true)}>
+          <span className="menu-bars" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+          Menu
+        </button>
+        <a className="quote-link" href="#contact-form">Request a Quote</a>
+      </div>
+
+      <aside className={`menu-pane ${menuOpen ? "is-open" : ""}`} aria-hidden={!menuOpen}>
+        <div className="menu-pane-top">
+          <div className="menu-brand">
+            <span>Apex</span>
+            <strong>Web Design Co</strong>
+          </div>
+          <a className="quote-link quote-link-pane" href="#contact-form" onClick={() => setMenuOpen(false)}>
+            Request a Quote
+          </a>
+          <button className="menu-close" type="button" onClick={() => setMenuOpen(false)} aria-label="Close menu">
+            ×
+          </button>
+        </div>
+        <nav className="menu-links" aria-label="Site sections">
+          {menuItems.map((item, index) => (
+            <a href={item.href} key={item.label} onClick={() => setMenuOpen(false)}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <strong>{item.label}</strong>
+              <em>{item.detail}</em>
+            </a>
+          ))}
+        </nav>
+        <p className="menu-note">Premium websites built for service businesses that need more calls, quote requests, and credibility.</p>
+      </aside>
+      {menuOpen && (
+        <button className="menu-scrim" type="button" onClick={() => setMenuOpen(false)} aria-label="Close menu"></button>
+      )}
+
       <section className="hero" aria-label="Apex Web Design">
         <video className="hero-video" autoPlay muted loop playsInline poster="/services-preview.png">
           <source src="/hero-video.mp4" type="video/mp4" />
@@ -106,48 +157,26 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section recent-work">
+      <section id="work-by-industry" className="section recent-work topic-section">
         <div className="container examples-section">
           <p className="eyebrow">Website Examples</p>
           <h2>
             More visual directions for service brands.
           </h2>
-          <div className="examples-grid">
-            <article>
-              <img
-                src="/website-examples-service-business.png"
-                alt="Service business website sample layouts"
-              />
-              <div>
-                <h3>High-converting service pages</h3>
-                <p>Clean layouts for renovation, home service, and lead-focused businesses.</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="/website-examples-luxury-construction.png"
-                alt="Luxury and construction website sample layouts"
-              />
-              <div>
-                <h3>Luxury and construction direction</h3>
-                <p>Dark premium compositions for builders, contractors, and high-ticket offers.</p>
-              </div>
-            </article>
-            <article>
-              <img
-                src="/website-examples-hvac.png"
-                alt="HVAC and heating business website sample layouts"
-              />
-              <div>
-                <h3>HVAC and home comfort brands</h3>
-                <p>Trust-forward designs for heating, cooling, and repair companies.</p>
-              </div>
-            </article>
+          <div className="filmstrip-showcase" aria-label="Website example cinematic film strip">
+            <video className="filmstrip-video" autoPlay muted loop playsInline poster="/website-examples-service-business.png">
+              <source src="/website-filmstrip.mp4" type="video/mp4" />
+            </video>
+            <div className="film-copy">
+              <span>Website examples in motion</span>
+              <p>Built for pet service providers, cleaning companies, small local brands, med spas, beauty businesses, dental practices, therapists, and more.</p>
+              <p className="film-detail">Available features include booking forms, local SEO, before/after galleries, social integration, financing integration, emergency service banners, promotional banners, Google review integration, and more.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="section recent-work">
+      <section id="case-studies" className="section recent-work topic-section">
         <div className="container work-panel">
           <div>
             <p className="eyebrow">Recent Work</p>
@@ -167,6 +196,39 @@ export default function App() {
           >
             View Live Site
           </a>
+        </div>
+      </section>
+
+      <section id="digital-trends" className="section topic-section">
+        <div className="container topic-panel">
+          <p className="eyebrow">Digital Trends</p>
+          <h2>Modern websites need more than good looks.</h2>
+          <div className="topic-grid">
+            <article className="card">
+              <h3>Mobile-first buying</h3>
+              <p>Most service customers compare options from their phone, so layouts need to be fast, direct, and easy to act on.</p>
+            </article>
+            <article className="card">
+              <h3>Local search trust</h3>
+              <p>Clear service pages, strong headings, and consistent business details help customers and search engines understand what you offer.</p>
+            </article>
+            <article className="card">
+              <h3>Conversion-focused pages</h3>
+              <p>Every section should move visitors toward a quote, call, or request instead of leaving them wondering what to do next.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="section topic-section about-section">
+        <div className="container topic-panel">
+          <p className="eyebrow">About</p>
+          <h2>Premium web design for service businesses that want to look established.</h2>
+          <p>
+            Apex Web Design Co creates polished websites for local businesses that need credibility, clarity,
+            and a smoother path from first visit to inquiry. The focus is simple: make your business easier
+            to trust, easier to understand, and easier to contact.
+          </p>
         </div>
       </section>
 
@@ -202,7 +264,7 @@ export default function App() {
               Monthly growth care is available for businesses that want hosting, SEO support, performance
               monitoring, and site updates handled under one polished plan.
             </p>
-            <a className="button button-dark promo-button" href="#contact">
+            <a className="button button-dark promo-button" href="#contact-form">
               Contact us Today for Current Promotions and New Business Discounts!
             </a>
           </div>
@@ -213,11 +275,14 @@ export default function App() {
         <div className="container pricing-chart">
           <div className="chart-heading">
             <p className="eyebrow">Website Redesign Cost Guide</p>
-            <h3>Typical redesign investment ranges</h3>
+            <h3>What many website builders charge</h3>
             <p>
-              These ranges are general planning estimates. Your quote depends on page count, content,
-              integrations, functionality, and launch needs.
+              These industry ranges are shown for comparison. Apex Web Design Co creates polished,
+              conversion-focused websites with smarter options for small businesses.
             </p>
+            <a className="chart-cta" href="#contact-form">
+              This is what other website builders charge. Reach out today to find out how Apex Web Design Co can save you money and help you take advantage of ongoing promotional discounts offered to small businesses.
+            </a>
           </div>
 
           <div className="chart-grid" role="table" aria-label="Website redesign cost guide">
@@ -280,10 +345,45 @@ export default function App() {
         <div className="container">
           <p className="eyebrow">Start here</p>
           <h2>Let's build your next website</h2>
-          <p>Tell me about your business and I will show you what is possible.</p>
-          <a className="button" href="mailto:hello@apexwebdesignco.com">
-            Contact Apex Web Design
-          </a>
+          <form
+            id="contact-form"
+            className="contact-form"
+            action="https://formsubmit.co/hello@apexwebdesignco.com"
+            method="post"
+          >
+            <div className="form-intro form-wide">
+              <h3>Information Request</h3>
+              <p>Complete the form below and Apex Web Design will follow up with next steps.</p>
+            </div>
+            <input type="hidden" name="_subject" value="New Apex Web Design information request" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" className="form-honey" tabIndex="-1" autoComplete="off" />
+            <label className="form-field form-wide">
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Name" required />
+            </label>
+            <label className="form-field form-wide">
+              <span>Phone</span>
+              <input type="tel" name="phone" placeholder="Phone" />
+            </label>
+            <label className="form-field form-wide">
+              <span>Email</span>
+              <input type="email" name="email" placeholder="Email" required />
+            </label>
+            <label className="form-field form-wide">
+              <span>Website / Information Needed</span>
+              <input type="text" name="information_needed" placeholder="Website / Information Needed" required />
+            </label>
+            <label className="form-field form-wide">
+              <span>Tell us what you need</span>
+              <textarea name="message" rows="5" placeholder="Tell us what you need" required />
+            </label>
+            <div className="form-actions form-wide">
+              <button className="button" type="submit">
+                Submit Request
+              </button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
