@@ -91,6 +91,9 @@ export default function App() {
           </span>
           Menu
         </button>
+        <a className="brand-logo" href="#" aria-label="Apex Web Design Co home">
+          <img src="/apex-logo.png" alt="Apex Web Design Co" />
+        </a>
         <a className="quote-link" href="#contact-form">Request a Quote</a>
       </div>
 
@@ -128,6 +131,7 @@ export default function App() {
         </video>
 
         <div className="container hero-content">
+          <img className="hero-logo" src="/apex-logo.png" alt="Apex Web Design Co" />
           <p className="eyebrow">Apex Web Design Co</p>
           <h1>
             Digital precision for brands ready to look established.

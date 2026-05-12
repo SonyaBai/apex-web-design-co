@@ -76,8 +76,34 @@ p {
 
 .menu-trigger,
 .quote-link,
-.menu-close {
+.menu-close,
+.brand-logo {
   pointer-events: auto;
+}
+
+.brand-logo {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 82px;
+  height: 82px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+  transform: translateX(-50%);
+  overflow: hidden;
+  backdrop-filter: blur(18px);
+}
+
+.brand-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .menu-trigger {
@@ -335,6 +361,15 @@ p {
 .hero-content {
   position: relative;
   z-index: 2;
+}
+
+.hero-logo {
+  display: block;
+  width: clamp(120px, 16vw, 180px);
+  height: auto;
+  margin: 0 0 26px;
+  border-radius: 22px;
+  box-shadow: 0 22px 68px rgba(0, 0, 0, 0.34);
 }
 
 .eyebrow {
@@ -1364,6 +1399,10 @@ h2 span {
     right: 12px;
   }
 
+  .brand-logo {
+    display: none;
+  }
+
   .quote-link {
     min-height: 44px;
     padding-inline: 14px;
@@ -1610,6 +1649,9 @@ h2 span {
           </span>
           Menu
         </button>
+        <a class="brand-logo" href="#" aria-label="Apex Web Design Co home">
+          <img src="public/apex-logo.png" alt="Apex Web Design Co" />
+        </a>
         <a class="quote-link" href="#contact-form">Request a Quote</a>
       </div>
 
@@ -1640,6 +1682,7 @@ h2 span {
         </video>
 
         <div class="container hero-content">
+          <img class="hero-logo" src="public/apex-logo.png" alt="Apex Web Design Co" />
           <p class="eyebrow">Apex Web Design Co</p>
           <h1>
             Digital precision for brands ready to look established.
