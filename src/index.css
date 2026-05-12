@@ -1366,6 +1366,10 @@ h2 span {
 }
 
 @media (max-width: 760px) {
+  .site-shell {
+    min-height: 0;
+  }
+
   .hero {
     min-height: 88vh;
     padding: 64px 18px;
@@ -1390,6 +1394,16 @@ h2 span {
   .contact,
   .stats {
     padding-inline: 18px;
+  }
+
+  .contact {
+    padding-block: 58px max(28px, env(safe-area-inset-bottom));
+  }
+
+  .contact-form {
+    margin-bottom: 0;
+    padding: 24px;
+    border-radius: 24px;
   }
 
   .site-nav {
