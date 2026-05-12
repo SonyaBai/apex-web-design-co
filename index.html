@@ -26,6 +26,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,6 +34,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 img,
@@ -610,8 +612,8 @@ h2 span {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.46), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.52)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 34%, transparent 68%, rgba(0, 0, 0, 0.48));
+    linear-gradient(90deg, rgba(0, 0, 0, 0.24), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.28)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.16), transparent 34%, transparent 68%, rgba(0, 0, 0, 0.3));
   z-index: 2;
   pointer-events: none;
 }
@@ -621,7 +623,7 @@ h2 span {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(1.48) contrast(1.1) saturate(1.16);
+  filter: brightness(2.05) contrast(1.04) saturate(1.18);
 }
 
 .film-copy {
@@ -633,8 +635,8 @@ h2 span {
   padding: clamp(22px, 3vw, 34px);
   border-left: 2px solid rgba(240, 171, 252, 0.72);
   background:
-    linear-gradient(135deg, rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.3)),
-    rgba(8, 8, 8, 0.44);
+    linear-gradient(135deg, rgba(10, 10, 10, 0.52), rgba(10, 10, 10, 0.24)),
+    rgba(8, 8, 8, 0.36);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
   backdrop-filter: blur(10px);
   pointer-events: none;
@@ -1263,16 +1265,20 @@ h2 span {
 
   .filmstrip-showcase {
     aspect-ratio: auto;
-    min-height: 620px;
+    width: 100%;
+    max-width: 100%;
+    min-height: 700px;
   }
 
   .film-copy {
-    left: 14px;
-    right: 14px;
+    left: 12px;
+    right: auto;
     bottom: 18px;
-    max-width: none;
-    padding: 20px 18px;
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    padding: 20px 16px;
     border-left-width: 2px;
+    overflow: hidden;
   }
 
   .film-copy span {
@@ -1282,22 +1288,26 @@ h2 span {
   }
 
   .film-copy p {
-    font-size: clamp(1.45rem, 8vw, 2rem);
-    line-height: 1.08;
+    max-width: 100%;
+    font-size: clamp(1.22rem, 6.2vw, 1.62rem);
+    line-height: 1.12;
+    overflow-wrap: break-word;
+    word-break: normal;
   }
 
   .film-copy .film-detail {
     max-width: 100%;
-    font-size: 0.94rem;
+    font-size: 0.86rem;
     line-height: 1.55;
   }
 
   .examples-section h2 {
-    max-width: 92vw;
-    font-size: clamp(2.7rem, 14vw, 4rem);
-    line-height: 0.96;
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2.25rem, 11vw, 3.2rem);
+    line-height: 1;
     margin-bottom: 28px;
-    overflow-wrap: normal;
+    overflow-wrap: break-word;
     word-break: normal;
   }
 
