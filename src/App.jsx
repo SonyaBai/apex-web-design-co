@@ -50,6 +50,19 @@ const menuItems = [
   { label: "Contact", href: "#contact", detail: "Start an information request" },
 ];
 
+const aboutExamples = [
+  { src: "/about-example-medspa.jpg", delay: "0s", top: "10%", right: "-4vw", width: "min(62vw, 930px)", rotate: "-2deg" },
+  { src: "/about-example-pet.jpg", delay: "4s", top: "18%", right: "5vw", width: "min(52vw, 780px)", rotate: "2deg" },
+  { src: "/about-example-balanced-therapy.png", delay: "8s", top: "9%", right: "-6vw", width: "min(60vw, 900px)", rotate: "1deg" },
+  { src: "/about-example-therapist.png", delay: "12s", top: "12%", right: "10vw", width: "min(38vw, 560px)", rotate: "-1deg" },
+  { src: "/about-example-realtor.png", delay: "16s", top: "8%", right: "6vw", width: "min(40vw, 580px)", rotate: "2deg" },
+  { src: "/about-example-loans.png", delay: "20s", top: "16%", right: "12vw", width: "min(40vw, 580px)", rotate: "-2deg" },
+  { src: "/about-example-dentist.png", delay: "24s", top: "10%", right: "14vw", width: "min(32vw, 460px)", rotate: "1deg" },
+  { src: "/about-example-beauty.png", delay: "28s", top: "9%", right: "11vw", width: "min(32vw, 460px)", rotate: "-2deg" },
+  { src: "/about-example-groomer.png", delay: "32s", top: "14%", right: "9vw", width: "min(32vw, 460px)", rotate: "2deg" },
+  { src: "/about-example-mechanic.png", delay: "36s", top: "12%", right: "10vw", width: "min(32vw, 460px)", rotate: "-1deg" },
+];
+
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -169,8 +182,8 @@ export default function App() {
             </video>
             <div className="film-copy">
               <span>Website examples in motion</span>
-              <p>Built for pet service providers, cleaning companies, small local brands, med spas, beauty businesses, dental practices, therapists, and more.</p>
-              <p className="film-detail">Available features include booking forms, local SEO, before/after galleries, social integration, financing integration, emergency service banners, promotional banners, Google review integration, and more.</p>
+              <p>Elevated web direction for service brands that need to look trusted before the first call.</p>
+              <p className="film-detail">Built for pet care, cleaning, med spa, beauty, dental, therapy, and local brands, with polished options for booking forms, local SEO, before-and-after galleries, social feeds, financing, service alerts, promotions, and Google reviews.</p>
             </div>
           </div>
         </div>
@@ -221,7 +234,23 @@ export default function App() {
       </section>
 
       <section id="about" className="section topic-section about-section">
-        <div className="container topic-panel">
+        <div className="about-background" aria-hidden="true">
+          {aboutExamples.map((example) => (
+            <img
+              src={example.src}
+              alt=""
+              key={example.src}
+              style={{
+                "--about-delay": example.delay,
+                "--about-top": example.top,
+                "--about-right": example.right,
+                "--about-width": example.width,
+                "--about-rotate": example.rotate,
+              }}
+            />
+          ))}
+        </div>
+        <div className="container topic-panel about-content">
           <p className="eyebrow">About</p>
           <h2>Premium web design for service businesses that want to look established.</h2>
           <p>
