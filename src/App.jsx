@@ -120,7 +120,7 @@ export default function App() {
             <span>Your Business</span>
           </h1>
           <p className="hero-copy">
-            High-end, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
+            Top-tier, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
           </p>
           <a className="button" href="#contact">
             Get My Free Website Quote
