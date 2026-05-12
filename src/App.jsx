@@ -2,24 +2,34 @@ import React, { useState } from "react";
 
 const services = [
   {
-    kicker: "Craft",
+    kicker: "01 / Strategy",
     title: "Custom Website Design",
     text: "Custom digital experiences shaped around your offer, your market, and the actions you want visitors to take.",
   },
   {
-    kicker: "Optimize",
+    kicker: "02 / Visibility",
     title: "SEO Foundations",
     text: "Search-ready structure, fast pages, strong headings, and local signals so the right customers can find you.",
   },
   {
-    kicker: "Convert",
+    kicker: "03 / Conversion",
     title: "Lead-Focused Pages",
     text: "Strategic calls to action, trust-building sections, and layouts that make the next step feel effortless.",
   },
   {
-    kicker: "Sustain",
+    kicker: "04 / Care",
     title: "Monthly Growth Care",
     text: "Hosting, SEO support, performance monitoring, and site updates handled under one polished monthly plan.",
+  },
+  {
+    kicker: "05 / Refresh",
+    title: "Website Redesign",
+    text: "A sharper visual system, clearer message, and stronger mobile experience for sites that no longer match the business.",
+  },
+  {
+    kicker: "06 / Tools",
+    title: "Booking & Integrations",
+    text: "Forms, review sections, galleries, social feeds, promo banners, and service features designed around real customer action.",
   },
 ];
 
@@ -118,13 +128,12 @@ export default function App() {
         </video>
 
         <div className="container hero-content">
-          <p className="eyebrow">Luxury web design for service businesses</p>
+          <p className="eyebrow">Apex Web Design Co</p>
           <h1>
-            Digital presence
-            <span>designed to elevate trust.</span>
+            Digital precision for brands ready to look established.
           </h1>
           <p className="hero-copy">
-            Top-tier, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
+            Top-tier websites for service businesses that need credibility, clarity, and a smoother path from first visit to inquiry.
           </p>
           <a className="button" href="#contact">
             Get My Free Website Quote
@@ -153,8 +162,11 @@ export default function App() {
         <div className="container">
           <p className="eyebrow">Our Services</p>
           <h2>
-            Measurable brand polish. <span>Built for local growth.</span>
+            Measurable brand transformation.
           </h2>
+          <p className="section-intro">
+            A more polished online presence built around trust, conversion, visibility, and the details that make a local business feel established.
+          </p>
 
           <div className="service-grid">
             {services.map((service) => (
