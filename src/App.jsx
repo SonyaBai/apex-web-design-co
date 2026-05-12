@@ -217,7 +217,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="digital-trends" className="section topic-section">
+      <section id="digital-trends" className="section topic-section digital-trends-section">
         <div className="container topic-panel">
           <p className="eyebrow">Digital Trends</p>
           <h2>Modern websites need more than good looks.</h2>
