@@ -91,9 +91,6 @@ export default function App() {
           </span>
           Menu
         </button>
-        <a className="brand-logo" href="#" aria-label="Apex Web Design Co home">
-          <img src="/apex-logo.png" alt="Apex Web Design Co" />
-        </a>
         <a className="quote-link" href="#contact-form">Request a Quote</a>
       </div>
 
