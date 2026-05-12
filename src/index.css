@@ -725,8 +725,8 @@ h2 span {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(5, 5, 5, 0.94) 0%, rgba(5, 5, 5, 0.78) 42%, rgba(5, 5, 5, 0.28) 100%),
-    linear-gradient(180deg, rgba(5, 5, 5, 0.18), rgba(5, 5, 5, 0.82));
+    linear-gradient(90deg, rgba(5, 5, 5, 0.92) 0%, rgba(5, 5, 5, 0.68) 40%, rgba(5, 5, 5, 0.06) 100%),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.04), rgba(5, 5, 5, 0.58));
 }
 
 .about-section::after {
@@ -737,7 +737,7 @@ h2 span {
   pointer-events: none;
   background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
   background-size: 100% 7px;
-  opacity: 0.24;
+  opacity: 0.12;
   mix-blend-mode: screen;
 }
 
@@ -758,8 +758,8 @@ h2 span {
   height: auto;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
-  box-shadow: 0 36px 120px rgba(0, 0, 0, 0.72), 0 0 70px rgba(240, 171, 252, 0.16);
-  filter: saturate(1.04) contrast(1.04);
+  box-shadow: 0 36px 120px rgba(0, 0, 0, 0.46), 0 0 90px rgba(240, 171, 252, 0.24);
+  filter: brightness(1.85) saturate(1.22) contrast(1.02);
   opacity: 0;
   transform: translateY(22px) rotate(1deg) scale(0.92);
   animation: aboutExampleFade 40s ease-in-out infinite;
@@ -788,7 +788,7 @@ h2 span {
 
   4%,
   10% {
-    opacity: 0.6;
+    opacity: 0.92;
     transform: translateY(0) rotate(var(--about-rotate, 0deg)) scale(1);
   }
 
@@ -1312,8 +1312,8 @@ h2 span {
 
   .about-section::before {
     background:
-      linear-gradient(180deg, rgba(5, 5, 5, 0.28) 0%, rgba(5, 5, 5, 0.78) 48%, rgba(5, 5, 5, 0.98) 100%),
-      linear-gradient(90deg, rgba(5, 5, 5, 0.76), rgba(5, 5, 5, 0.24));
+      linear-gradient(180deg, rgba(5, 5, 5, 0.08) 0%, rgba(5, 5, 5, 0.64) 48%, rgba(5, 5, 5, 0.94) 100%),
+      linear-gradient(90deg, rgba(5, 5, 5, 0.68), rgba(5, 5, 5, 0.08));
   }
 
   .about-background img {
