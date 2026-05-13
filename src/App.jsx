@@ -212,7 +212,7 @@ export default function App() {
           <div>
             <p className="eyebrow">Recent Work</p>
             <h2>
-              Elevate Auto & Diesel Repair.
+              Elevated Auto & Diesel Repair.
             </h2>
             <p>
               A service-business website built to make the shop look credible, help local drivers understand
