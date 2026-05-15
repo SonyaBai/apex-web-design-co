@@ -55,7 +55,7 @@ const faqs = [
   },
 ];
 
-const googleReviewsUrl = "https://www.google.com/search?q=Apex+Web+Design+Co+reviews";
+const googleReviewsUrl = "https://www.google.com/search?sca_esv=fcc86b8bedf6676a&rlz=1C5CHFA_enUS1021US1038&sxsrf=ANbL-n6np0i0T0dWB0AKW39wM_uoyfUjLA%3A1778808036850&q=Apex%20Web%20Design%20Co&stick=H4sIAAAAAAAAAONgU1IxqEg0NDSzTDZJMjNIsjQxNrUyqDBKtjRISTUzMTIzTDY0MUxcxCrkWJBaoRCemqTgklqcmZ6n4JwPABOd2KY9AAAA&mat=CfmTaXd-HFYn&ved=2ahUKEwi1z6OpkLqUAxV2tysGHdzaBXMQrMcEegQIGhAI#mpd=~2834484344971170809/customers/reviews";
 
 const reviewHighlights = [
   {
@@ -423,7 +423,7 @@ export default function App() {
             <strong>Google reviews</strong>
             <div className="review-stars" aria-hidden="true">★★★★★</div>
             <p>
-              Add your Google Business Profile review link, Place ID, or approved widget code to turn this panel into a live review feed.
+              Read Apex Web Design Co reviews directly on Google, or leave feedback after your website project is complete.
             </p>
           </div>
         </div>
