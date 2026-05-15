@@ -220,9 +220,8 @@ p {
 
 .menu-brand {
   display: grid;
-  gap: 2px;
+  gap: 4px;
   color: #ffffff;
-  text-transform: uppercase;
 }
 
 .menu-brand span {
@@ -233,8 +232,12 @@ p {
 }
 
 .menu-brand strong {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  letter-spacing: 0.02em;
+  max-width: 180px;
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 2.8vw, 1.8rem);
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 0.98;
 }
 
 .quote-link-pane {
@@ -273,16 +276,15 @@ p {
 .menu-links a {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 14px;
-  row-gap: 4px;
+  column-gap: 16px;
+  row-gap: 6px;
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.11);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.045);
   color: #ffffff;
-  padding: 16px;
+  padding: 18px;
   text-decoration: none;
-  text-transform: uppercase;
   transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
 }
 
@@ -296,16 +298,20 @@ p {
 }
 
 .menu-links strong {
-  font-size: clamp(1.15rem, 2.8vw, 1.65rem);
-  line-height: 1;
+  font-family: var(--display);
+  font-size: clamp(1.55rem, 3.5vw, 2.35rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.02;
 }
 
 .menu-links em {
-  color: rgba(255, 255, 255, 0.55);
-  font-size: 0.76rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.72rem;
   font-style: normal;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .menu-links a:hover {
@@ -1575,7 +1581,7 @@ h2 span {
   }
 
   .menu-links strong {
-    font-size: clamp(1.05rem, 6vw, 1.45rem);
+    font-size: clamp(1.35rem, 7vw, 2rem);
   }
 
   .filmstrip-showcase {
