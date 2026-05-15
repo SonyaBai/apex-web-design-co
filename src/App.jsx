@@ -409,10 +409,10 @@ export default function App() {
       <section id="reviews" className="section reviews-section">
         <div className="container reviews-panel">
           <div className="reviews-copy">
-            <p className="eyebrow">Google Reviews</p>
-            <h2>Trust signals that support the first conversation.</h2>
+            <p className="eyebrow">Client Reviews</p>
+            <h2>See what people are saying about Apex.</h2>
             <p>
-              Connect visitors to Apex Web Design Co's Google Business reviews so they can see real public feedback before they request a quote.
+              This section connects visitors to Apex Web Design Co's Google Business reviews so they can see public feedback before they request a quote.
             </p>
             <a className="button" href={googleReviewsUrl} target="_blank" rel="noreferrer">
               View Reviews on Google
@@ -420,7 +420,7 @@ export default function App() {
           </div>
           <div className="google-review-card" aria-label="Google reviews connection">
             <span className="review-badge">Google</span>
-            <strong>Reviews ready</strong>
+            <strong>Google reviews</strong>
             <div className="review-stars" aria-hidden="true">★★★★★</div>
             <p>
               Add your Google Business Profile review link, Place ID, or approved widget code to turn this panel into a live review feed.

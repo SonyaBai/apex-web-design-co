@@ -1164,9 +1164,10 @@ h2 span {
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   background:
-    radial-gradient(circle at 18% 10%, rgba(240, 171, 252, 0.14), transparent 32%),
-    radial-gradient(circle at 86% 20%, rgba(231, 199, 123, 0.1), transparent 30%),
+    radial-gradient(circle at 18% 10%, rgba(240, 171, 252, 0.2), transparent 32%),
+    radial-gradient(circle at 86% 20%, rgba(231, 199, 123, 0.16), transparent 30%),
     linear-gradient(135deg, #070707, #120616 62%, #050505);
 }
 
