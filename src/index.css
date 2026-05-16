@@ -1181,8 +1181,7 @@ h2 span {
   pointer-events: none;
 }
 
-.reviews-panel,
-.review-grid {
+.reviews-panel {
   position: relative;
   z-index: 1;
 }
@@ -1250,13 +1249,6 @@ h2 span {
   margin: 0;
   color: var(--muted);
   line-height: 1.55;
-}
-
-.review-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 34px;
 }
 
 .contact {
@@ -1489,7 +1481,6 @@ h2 span {
   .service-grid,
   .topic-grid,
   .reviews-panel,
-  .review-grid,
   .work-panel,
   .split-grid,
   .mock-hero,

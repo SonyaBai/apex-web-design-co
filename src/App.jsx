@@ -57,21 +57,6 @@ const faqs = [
 
 const googleReviewsUrl = "https://www.google.com/search?sca_esv=fcc86b8bedf6676a&rlz=1C5CHFA_enUS1021US1038&sxsrf=ANbL-n6np0i0T0dWB0AKW39wM_uoyfUjLA%3A1778808036850&q=Apex%20Web%20Design%20Co&stick=H4sIAAAAAAAAAONgU1IxqEg0NDSzTDZJMjNIsjQxNrUyqDBKtjRISTUzMTIzTDY0MUxcxCrkWJBaoRCemqTgklqcmZ6n4JwPABOd2KY9AAAA&mat=CfmTaXd-HFYn&ved=2ahUKEwi1z6OpkLqUAxV2tysGHdzaBXMQrMcEegQIGhAI#mpd=~2834484344971170809/customers/reviews";
 
-const reviewHighlights = [
-  {
-    title: "Google Business Profile",
-    text: "A dedicated trust section designed to connect visitors with your public Google reviews and business profile.",
-  },
-  {
-    title: "Review-ready layout",
-    text: "Built so live Google review widgets or approved API feeds can be added without redesigning the page.",
-  },
-  {
-    title: "Proof before the form",
-    text: "Placed near the quote flow so visitors see credibility signals before sending an information request.",
-  },
-];
-
 const menuItems = [
   { label: "Services", href: "#services", detail: "Design, SEO, hosting, and care" },
   { label: "Case Studies", href: "#case-studies", detail: "Recent client work and outcomes" },
@@ -426,14 +411,6 @@ export default function App() {
               Read Apex Web Design Co reviews directly on Google, or leave feedback after your website project is complete.
             </p>
           </div>
-        </div>
-        <div className="container review-grid">
-          {reviewHighlights.map((item) => (
-            <article className="card" key={item.title}>
-              <h3>{item.title}</h3>
-              <p>{item.text}</p>
-            </article>
-          ))}
         </div>
       </section>
 
