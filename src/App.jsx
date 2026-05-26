@@ -421,7 +421,7 @@ export default function App() {
           <form
             id="contact-form"
             className="contact-form"
-            action="https://formsubmit.co/hello@apexwebdesignco.com"
+            action="https://formsubmit.co/sonya@apexwebdesignco.com"
             method="post"
           >
             <div className="form-intro form-wide">
