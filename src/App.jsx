@@ -421,7 +421,7 @@ export default function App() {
           <form
             id="contact-form"
             className="contact-form"
-            action="https://formsubmit.co/sonya@apexwebdesignco.com"
+            action="https://formspree.io/f/xojrvwwb"
             method="post"
           >
             <div className="form-intro form-wide">
@@ -429,8 +429,6 @@ export default function App() {
               <p>Complete the form below and Apex Web Design will follow up with next steps.</p>
             </div>
             <input type="hidden" name="_subject" value="New Apex Web Design information request" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="text" name="_honey" className="form-honey" tabIndex="-1" autoComplete="off" />
             <label className="form-field form-wide">
               <span>Name</span>
               <input type="text" name="name" placeholder="Name" required />
