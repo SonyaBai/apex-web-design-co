@@ -374,6 +374,24 @@ export default function App() {
         </div>
       </section>
 
+      <section id="promotions" className="section promotion-section">
+        <div className="container promotion-panel">
+          <div className="promotion-copy">
+            <p className="eyebrow">Limited Time Promotion</p>
+            <h2>Summer website savings are here.</h2>
+            <p>
+              Take $250 off website design for a limited time. Offer ends June 5 for new website projects.
+            </p>
+            <a className="button" href="#contact-form">
+              Claim This Promotion
+            </a>
+          </div>
+          <a className="promotion-art" href="#contact-form" aria-label="Claim the Apex Web Design summer sale promotion">
+            <img src="/summer-sale.png" alt="Apex Web Design Co summer sale: $250 off website design, offer ends June 5" />
+          </a>
+        </div>
+      </section>
+
       <section className="section faq">
         <div className="container">
           <p className="eyebrow">Questions</p>
