@@ -131,6 +131,18 @@ const portfolioItems = [
     text: "A premium beauty concept with elegant service positioning, appointment flow, and visual proof.",
     image: "/portfolio-beauty.png",
   },
+  {
+    title: "Summit Garage Doors",
+    category: "Home Services",
+    text: "A luxury home services concept with strong visual authority, premium product positioning, and quote-focused calls to action.",
+    image: "/portfolio-garage-doors.png",
+  },
+  {
+    title: "Forest Edge Realty",
+    category: "Real Estate",
+    text: "A refined real estate direction built around lifestyle imagery, local trust, property browsing, and polished lead generation.",
+    image: "/portfolio-forest-edge-realty.png",
+  },
 ];
 
 export default function App() {
