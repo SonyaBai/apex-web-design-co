@@ -770,6 +770,175 @@ h2 span {
     #080808;
 }
 
+.portfolio-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 6%, rgba(240, 171, 252, 0.18), transparent 30%),
+    radial-gradient(circle at 88% 22%, rgba(231, 199, 123, 0.12), transparent 28%),
+    linear-gradient(135deg, #050505, #100713 58%, #050505);
+}
+
+.portfolio-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 8px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.portfolio-heading,
+.portfolio-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-heading h2 {
+  max-width: 1040px;
+}
+
+.portfolio-heading .section-intro {
+  max-width: 820px;
+  margin-top: -18px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.portfolio-card {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid rgba(240, 171, 252, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
+    rgba(12, 12, 12, 0.88);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.25);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(240, 171, 252, 0.46);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.36);
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.035);
+}
+
+.portfolio-image {
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #050505;
+}
+
+.portfolio-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 220ms ease;
+}
+
+.portfolio-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(20px, 3vw, 28px);
+}
+
+.portfolio-category {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #f0abfc;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.portfolio-card h3 {
+  margin: 0 0 12px;
+  font-family: var(--display);
+  font-size: clamp(1.55rem, 2.6vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.portfolio-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.portfolio-card .button {
+  margin-top: auto;
+}
+
+.portfolio-featured {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(320px, 1fr);
+  align-items: stretch;
+  min-height: 360px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(231, 199, 123, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(240, 171, 252, 0.12), rgba(255, 255, 255, 0.03)),
+    #080808;
+}
+
+.portfolio-featured .portfolio-card-body {
+  justify-content: center;
+  max-width: 760px;
+  padding: clamp(28px, 5vw, 52px);
+}
+
+.portfolio-featured h3 {
+  font-size: clamp(2.4rem, 6vw, 5.4rem);
+}
+
+.portfolio-live-mark {
+  display: grid;
+  place-content: center;
+  min-height: 100%;
+  padding: clamp(28px, 5vw, 52px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(135deg, rgba(240, 171, 252, 0.14), rgba(255, 255, 255, 0.035)),
+    url("/digital-studio-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-live-mark span {
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.portfolio-live-mark strong {
+  display: block;
+  margin-top: 10px;
+  color: #ffffff;
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
 .topic-section {
   border-top: 1px solid var(--line);
   background:
@@ -1585,6 +1754,7 @@ h2 span {
   .stats-grid,
   .service-grid,
   .topic-grid,
+  .portfolio-grid,
   .promotion-panel,
   .reviews-panel,
   .work-panel,
@@ -1672,6 +1842,27 @@ h2 span {
 
   .promotion-art {
     border-radius: 8px;
+  }
+
+  .portfolio-heading .section-intro {
+    margin-top: -8px;
+  }
+
+  .portfolio-featured {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .portfolio-live-mark {
+    min-height: 220px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    place-content: end start;
+  }
+
+  .portfolio-card .button {
+    width: 100%;
   }
 
   .filmstrip-showcase {

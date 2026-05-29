@@ -80,6 +80,59 @@ const aboutExamples = [
   { src: "/about-example-mechanic.png", delay: "36s", top: "12%", right: "10vw", width: "min(32vw, 460px)", rotate: "-1deg" },
 ];
 
+const portfolioItems = [
+  {
+    title: "Elevated Auto & Diesel Repair",
+    category: "Live Client Website",
+    text: "A live service-business website built to help local drivers understand the shop, trust the team, and request help quickly.",
+    href: "https://www.elevateautoanddieselrepair.com",
+    cta: "View Live Site",
+    featured: true,
+  },
+  {
+    title: "K9 Elite Training",
+    category: "Dog Training",
+    text: "A bold training concept with confident messaging, service highlights, and a high-trust hero section.",
+    image: "/portfolio-dog-training.png",
+  },
+  {
+    title: "Petit Fournil Bakery",
+    category: "Bakery",
+    text: "A warm European bakery direction built around product appetite, local charm, and online ordering.",
+    image: "/portfolio-bakery.png",
+  },
+  {
+    title: "Willow & Bloom Floral Studio",
+    category: "Florist",
+    text: "A soft, polished floral storefront concept with occasion shopping and elegant product storytelling.",
+    image: "/portfolio-flower-shop.png",
+  },
+  {
+    title: "Fresh Coat Painting",
+    category: "Painting Contractor",
+    text: "A trust-first home services direction with review proof, quote calls-to-action, and project examples.",
+    image: "/portfolio-painter.png",
+  },
+  {
+    title: "Green Roots Microgreens",
+    category: "Local Food Brand",
+    text: "A clean farm-to-table concept focused on freshness, local buying, and wholesale inquiries.",
+    image: "/portfolio-microgreens.png",
+  },
+  {
+    title: "Paws & Peace Pet Sitting",
+    category: "Pet Services",
+    text: "A calm pet-care layout designed to feel warm, reliable, and easy to book from mobile.",
+    image: "/portfolio-pet-sitting.png",
+  },
+  {
+    title: "Lush Beauty",
+    category: "Beauty Studio",
+    text: "A premium beauty concept with elegant service positioning, appointment flow, and visual proof.",
+    image: "/portfolio-beauty.png",
+  },
+];
+
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -191,11 +244,49 @@ export default function App() {
         </div>
       </section>
 
-      <section id="portfolio" className="section recent-work topic-section">
-        <div className="container examples-section">
-          <p className="eyebrow">Website Examples</p>
+      <section id="portfolio" className="section portfolio-section topic-section">
+        <div className="container portfolio-heading">
+          <p className="eyebrow">Portfolio</p>
           <h2>
-            More visual directions for service brands.
+            Recent website directions for service brands.
+          </h2>
+          <p className="section-intro">
+            A dedicated look at live client work and polished website examples for local service businesses, specialty shops, beauty brands, pet care, and trades.
+          </p>
+        </div>
+        <div className="container portfolio-grid">
+          {portfolioItems.map((item) => (
+            <article className={`portfolio-card ${item.featured ? "portfolio-featured" : ""}`} key={item.title}>
+              {item.image ? (
+                <div className="portfolio-image">
+                  <img src={item.image} alt={`${item.title} website example`} />
+                </div>
+              ) : (
+                <div className="portfolio-live-mark">
+                  <span>Live Site</span>
+                  <strong>Client Work</strong>
+                </div>
+              )}
+              <div className="portfolio-card-body">
+                <span className="portfolio-category">{item.category}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                {item.href && (
+                  <a className="button" href={item.href} target="_blank" rel="noreferrer">
+                    {item.cta}
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section recent-work topic-section">
+        <div className="container examples-section">
+          <p className="eyebrow">Website Examples in Motion</p>
+          <h2>
+            Cinematic visual inspiration for service brands.
           </h2>
           <div className="filmstrip-showcase" aria-label="Website example cinematic film strip">
             <video className="filmstrip-video" autoPlay muted loop playsInline poster="/website-examples-service-business.png">

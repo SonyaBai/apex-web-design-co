@@ -786,6 +786,175 @@ h2 span {
     #080808;
 }
 
+.portfolio-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 6%, rgba(240, 171, 252, 0.18), transparent 30%),
+    radial-gradient(circle at 88% 22%, rgba(231, 199, 123, 0.12), transparent 28%),
+    linear-gradient(135deg, #050505, #100713 58%, #050505);
+}
+
+.portfolio-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 8px;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.portfolio-heading,
+.portfolio-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-heading h2 {
+  max-width: 1040px;
+}
+
+.portfolio-heading .section-intro {
+  max-width: 820px;
+  margin-top: -18px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.portfolio-card {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid rgba(240, 171, 252, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.025)),
+    rgba(12, 12, 12, 0.88);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.25);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(240, 171, 252, 0.46);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.36);
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.035);
+}
+
+.portfolio-image {
+  aspect-ratio: 16 / 10.5;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #050505;
+}
+
+.portfolio-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 220ms ease;
+}
+
+.portfolio-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(20px, 3vw, 28px);
+}
+
+.portfolio-category {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #f0abfc;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.portfolio-card h3 {
+  margin: 0 0 12px;
+  font-family: var(--display);
+  font-size: clamp(1.55rem, 2.6vw, 2.25rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.portfolio-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.portfolio-card .button {
+  margin-top: auto;
+}
+
+.portfolio-featured {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(320px, 1fr);
+  align-items: stretch;
+  min-height: 360px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(231, 199, 123, 0.16), transparent 32%),
+    linear-gradient(135deg, rgba(240, 171, 252, 0.12), rgba(255, 255, 255, 0.03)),
+    #080808;
+}
+
+.portfolio-featured .portfolio-card-body {
+  justify-content: center;
+  max-width: 760px;
+  padding: clamp(28px, 5vw, 52px);
+}
+
+.portfolio-featured h3 {
+  font-size: clamp(2.4rem, 6vw, 5.4rem);
+}
+
+.portfolio-live-mark {
+  display: grid;
+  place-content: center;
+  min-height: 100%;
+  padding: clamp(28px, 5vw, 52px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    linear-gradient(135deg, rgba(240, 171, 252, 0.14), rgba(255, 255, 255, 0.035)),
+    url("/digital-studio-bg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-live-mark span {
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.portfolio-live-mark strong {
+  display: block;
+  margin-top: 10px;
+  color: #ffffff;
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
 .topic-section {
   border-top: 1px solid var(--line);
   background:
@@ -1601,6 +1770,7 @@ h2 span {
   .stats-grid,
   .service-grid,
   .topic-grid,
+  .portfolio-grid,
   .promotion-panel,
   .reviews-panel,
   .work-panel,
@@ -1688,6 +1858,27 @@ h2 span {
 
   .promotion-art {
     border-radius: 8px;
+  }
+
+  .portfolio-heading .section-intro {
+    margin-top: -8px;
+  }
+
+  .portfolio-featured {
+    grid-column: auto;
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .portfolio-live-mark {
+    min-height: 220px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    place-content: end start;
+  }
+
+  .portfolio-card .button {
+    width: 100%;
   }
 
   .filmstrip-showcase {
@@ -2006,10 +2197,104 @@ h2 span {
         </div>
       </section>
 
-      <section id="portfolio" class="section recent-work topic-section">
+      <section id="portfolio" class="section portfolio-section topic-section">
+        <div class="container portfolio-heading">
+          <p class="eyebrow">Portfolio</p>
+          <h2>Recent website directions for service brands.</h2>
+          <p class="section-intro">
+            A dedicated look at live client work and polished website examples for local service businesses, specialty shops, beauty brands, pet care, and trades.
+          </p>
+        </div>
+        <div class="container portfolio-grid">
+          <article class="portfolio-card portfolio-featured">
+            <div class="portfolio-live-mark">
+              <span>Live Site</span>
+              <strong>Client Work</strong>
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-category">Live Client Website</span>
+              <h3>Elevated Auto & Diesel Repair</h3>
+              <p>A live service-business website built to help local drivers understand the shop, trust the team, and request help quickly.</p>
+              <a class="button" href="https://www.elevateautoanddieselrepair.com" target="_blank" rel="noreferrer">View Live Site</a>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="public/portfolio-dog-training.png" alt="K9 Elite Training website example" />
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-category">Dog Training</span>
+              <h3>K9 Elite Training</h3>
+              <p>A bold training concept with confident messaging, service highlights, and a high-trust hero section.</p>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="public/portfolio-bakery.png" alt="Petit Fournil Bakery website example" />
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-category">Bakery</span>
+              <h3>Petit Fournil Bakery</h3>
+              <p>A warm European bakery direction built around product appetite, local charm, and online ordering.</p>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="public/portfolio-flower-shop.png" alt="Willow & Bloom Floral Studio website example" />
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-category">Florist</span>
+              <h3>Willow & Bloom Floral Studio</h3>
+              <p>A soft, polished floral storefront concept with occasion shopping and elegant product storytelling.</p>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="public/portfolio-painter.png" alt="Fresh Coat Painting website example" />
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-category">Painting Contractor</span>
+              <h3>Fresh Coat Painting</h3>
+              <p>A trust-first home services direction with review proof, quote calls-to-action, and project examples.</p>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="public/portfolio-microgreens.png" alt="Green Roots Microgreens website example" />
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-category">Local Food Brand</span>
+              <h3>Green Roots Microgreens</h3>
+              <p>A clean farm-to-table concept focused on freshness, local buying, and wholesale inquiries.</p>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="public/portfolio-pet-sitting.png" alt="Paws & Peace Pet Sitting website example" />
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-category">Pet Services</span>
+              <h3>Paws & Peace Pet Sitting</h3>
+              <p>A calm pet-care layout designed to feel warm, reliable, and easy to book from mobile.</p>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <img src="public/portfolio-beauty.png" alt="Lush Beauty website example" />
+            </div>
+            <div class="portfolio-card-body">
+              <span class="portfolio-category">Beauty Studio</span>
+              <h3>Lush Beauty</h3>
+              <p>A premium beauty concept with elegant service positioning, appointment flow, and visual proof.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section recent-work topic-section">
         <div class="container examples-section">
-          <p class="eyebrow">Website Examples</p>
-          <h2>More visual directions for service brands.</h2>
+          <p class="eyebrow">Website Examples in Motion</p>
+          <h2>Cinematic visual inspiration for service brands.</h2>
           <div class="filmstrip-showcase" aria-label="Website example cinematic film strip">
             <video class="filmstrip-video" autoplay muted loop playsinline poster="public/website-examples-service-business.png">
               <source src="public/website-filmstrip.mp4" type="video/mp4" />
