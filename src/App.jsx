@@ -60,7 +60,7 @@ const googleReviewsUrl = "https://www.google.com/search?sca_esv=fcc86b8bedf6676a
 const menuItems = [
   { label: "Services", href: "#services", detail: "Design, SEO, hosting, and care" },
   { label: "Case Studies", href: "#case-studies", detail: "Recent client work and outcomes" },
-  { label: "Work by Industry", href: "#work-by-industry", detail: "Visual directions for service brands" },
+  { label: "Portfolio", href: "#portfolio", detail: "Visual directions for service brands" },
   { label: "Digital Trends", href: "#digital-trends", detail: "What modern buyers expect online" },
   { label: "About", href: "#about", detail: "How Apex builds trust-first websites" },
   { label: "Reviews", href: "#reviews", detail: "Google Business trust signals" },
@@ -191,7 +191,7 @@ export default function App() {
         </div>
       </section>
 
-      <section id="work-by-industry" className="section recent-work topic-section">
+      <section id="portfolio" className="section recent-work topic-section">
         <div className="container examples-section">
           <p className="eyebrow">Website Examples</p>
           <h2>
