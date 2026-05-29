@@ -1192,6 +1192,49 @@ h2 span {
   line-height: 1.58;
 }
 
+.promotion-copy p strong {
+  color: #ffffff;
+}
+
+.promo-list {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.promo-list li {
+  position: relative;
+  padding-left: 30px;
+  color: rgba(255, 255, 255, 0.86);
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.promo-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-2);
+  font-weight: 900;
+}
+
+.promotion-copy .promo-terms {
+  max-width: 620px;
+  font-size: 0.98rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.promotion-copy .promo-close {
+  margin-top: 16px;
+  color: #ffffff;
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.25;
+}
+
 .promotion-art {
   display: block;
   overflow: hidden;

@@ -378,10 +378,21 @@ export default function App() {
         <div className="container promotion-panel">
           <div className="promotion-copy">
             <p className="eyebrow">Limited Time Promotion</p>
-            <h2>Summer website savings are here.</h2>
+            <h2>Summer Sale - Save $250 on Website Design</h2>
             <p>
-              Take $250 off website design for a limited time. Offer ends June 5 for new website projects.
+              For a limited time, receive <strong>$250 off</strong> any new website design package from Apex Web Design Co.
             </p>
+            <ul className="promo-list">
+              <li>Custom Website Design</li>
+              <li>Mobile-Friendly & Responsive</li>
+              <li>SEO-Optimized Setup</li>
+              <li>Professional, Modern Design</li>
+              <li>Built to Help Your Business Stand Out</li>
+            </ul>
+            <p className="promo-terms">
+              <strong>Offer expires June 5, 2026.</strong> To qualify for this promotion, the website project must be purchased and the initial payment completed on or before <strong>June 5, 2026</strong>. This offer cannot be combined with other discounts or promotions.
+            </p>
+            <p className="promo-close">Let's build a website that works as hard as you do.</p>
             <a className="button" href="#contact-form">
               Claim This Promotion
             </a>
