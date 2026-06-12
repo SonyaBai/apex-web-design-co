@@ -190,6 +190,10 @@ export default function App() {
         <button className="menu-scrim" type="button" onClick={() => setMenuOpen(false)} aria-label="Close menu"></button>
       )}
 
+      <a className="text-me-button" href="sms:+17204670527" aria-label="Text Apex Web Design">
+        <span>Text Me</span>
+      </a>
+
       <section className="hero" aria-label="Apex Web Design">
         <video className="hero-video" autoPlay muted loop playsInline poster="/services-preview.png">
           <source src="/hero-video.mp4" type="video/mp4" />

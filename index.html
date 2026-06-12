@@ -339,6 +339,52 @@ p {
   cursor: pointer;
 }
 
+.text-me-button {
+  position: fixed;
+  right: clamp(18px, 4vw, 34px);
+  bottom: clamp(18px, 4vw, 34px);
+  z-index: 38;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 58px;
+  min-width: 148px;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #080808;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  padding: 0 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 18px 52px rgba(0, 0, 0, 0.36);
+  animation: text-me-pop 520ms ease-out 320ms both;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.text-me-button:hover {
+  transform: translateY(-3px);
+  border-color: rgba(240, 171, 252, 0.82);
+  box-shadow: 0 22px 62px rgba(0, 0, 0, 0.42);
+}
+
+.text-me-button span {
+  line-height: 1;
+}
+
+@keyframes text-me-pop {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 .hero {
   position: relative;
   min-height: 92vh;
@@ -1757,6 +1803,15 @@ h2 span {
     min-height: 0;
   }
 
+  .text-me-button {
+    right: 16px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    min-width: 132px;
+    min-height: 52px;
+    padding-inline: 22px;
+    font-size: 0.9rem;
+  }
+
   .hero {
     min-height: 88vh;
     padding: 64px 18px;
@@ -2111,6 +2166,10 @@ h2 span {
         <p class="menu-note">Premium websites built for service businesses that need more calls, quote requests, and credibility.</p>
       </aside>
       <button class="menu-scrim" id="menu-scrim" type="button" aria-label="Close menu" hidden></button>
+
+      <a class="text-me-button" href="sms:+17204670527" aria-label="Text Apex Web Design">
+        <span>Text Me</span>
+      </a>
 
       <section class="hero" aria-label="Apex Web Design">
         <video class="hero-video" autoplay muted loop playsinline poster="public/services-preview.png">
