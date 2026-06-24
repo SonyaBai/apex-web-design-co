@@ -497,7 +497,7 @@ export default function App() {
               <li>Built to Help Your Business Stand Out</li>
             </ul>
             <p className="promo-terms">
-              <strong>Offer expires June 5, 2026.</strong> To qualify for this promotion, the website project must be purchased and the initial payment completed on or before <strong>June 5, 2026</strong>. This offer cannot be combined with other discounts or promotions.
+              <strong>Offer expires July 15, 2026.</strong> To qualify for this promotion, the website project must be purchased and the initial payment completed on or before <strong>July 15, 2026</strong>. This offer cannot be combined with other discounts or promotions.
             </p>
             <p className="promo-close">Let's build a website that works as hard as you do.</p>
             <a className="button" href="#contact-form">
@@ -505,7 +505,7 @@ export default function App() {
             </a>
           </div>
           <a className="promotion-art" href="#contact-form" aria-label="Claim the Apex Web Design summer sale promotion">
-            <img src="/summer-sale.png" alt="Apex Web Design Co summer sale: $250 off website design, offer ends June 5" />
+            <img src="/summer-sale.png" alt="Apex Web Design Co summer sale: $250 off website design, offer ends July 15" />
           </a>
         </div>
       </section>
